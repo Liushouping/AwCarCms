@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+use Encore\Admin\Traits\DefaultDatetimeFormat;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use HasFactory, Notifiable, MustVerifyEmailTrait;
-
+    use HasFactory, Notifiable, MustVerifyEmailTrait, DefaultDatetimeFormat;
     protected $fillable = [
         'name',
         'email',
