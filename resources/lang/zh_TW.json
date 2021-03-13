@@ -75,6 +75,8 @@
     "Manage Role" : "Manage Role",
     "Manage Team" : "Manage Team",
     "Name": "姓名",
+    "Value": "值",
+    "Description": "描述",
     "Nevermind" : "Nevermind",
     "New Password" : "New Password",
     "Not Found": "頁面不存在",

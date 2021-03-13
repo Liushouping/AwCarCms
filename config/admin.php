@@ -5,12 +5,12 @@ return [
     /*
      * 站点标题
      */
-    'name' => '後台管理',
+    'name' => '後台管理11',
 
     /*
      * 页面顶部 Logo
      */
-    'logo' => '<b>T</b> hga',
+    'logo' => '<b>Thga</b>',
 
     /*
      * 页面顶部小 Logo
@@ -172,22 +172,22 @@ return [
      * 页面风格
      * @see https://adminlte.io/docs/2.4/layout
      */
-    'skin' => 'skin-blue-light',
+    'skin' => 'skin-purple',
 
     /*
      * 后台布局
      */
-    'layout' => ['sidebar-mini', 'sidebar-collapse'],
+    'layout' => ['sidebar-mini'],
 
     /*
      * 登录页背景图
      */
-    'login_background_image' => '',
+    'login_background_image' => 'https://www.bootstrapdash.com/demo/star-laravel-free/template/assets/images/auth/login_1.jpg',
 
     /*
      * 显示版本
      */
-    'show_version' => true,
+    'show_version' => false,
 
     /*
      * 显示环境
@@ -234,6 +234,13 @@ return [
      * 扩展设置.
      */
     'extensions' => [
-
+        'media-manager' => [
+            // Select a local disk that you configured in `config/filesystem.php`
+            'disk' => 'public'
+        ],
+        'screenfull' => [
+            // If the value is set to false, this extension will be disabled
+            'enable' => true
+        ]
     ],
 ];

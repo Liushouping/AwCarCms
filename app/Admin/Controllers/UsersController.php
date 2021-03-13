@@ -20,7 +20,6 @@ class UsersController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new User);
-
         // 创建一个列名为 ID 的列，内容是用户的 id 字段
         $grid->id('ID');
 
@@ -47,6 +46,15 @@ class UsersController extends AdminController
             });
         });
 
+        $grid->filter(function($filter){
+
+            // 去掉默认的id过滤器
+            // $filter->disableIdFilter();
+
+            // 在这里添加字段过滤器
+            $filter->between('created_at','創建時間')->datetime(['format' => 'YYYY-MM-DD']);
+        });
         return $grid;
+        
     }
 }

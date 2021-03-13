@@ -12,6 +12,12 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 class User extends Authenticatable implements MustVerifyEmailContract
 {
     use HasFactory, Notifiable, MustVerifyEmailTrait, DefaultDatetimeFormat;
+    
+    public $sortable = [
+        'order_column_name' => 'order_column',
+        'sort_when_creating' => true,
+    ];
+
     protected $fillable = [
         'name',
         'email',
