@@ -17,18 +17,11 @@
 </head>
 
 <body>
-  <div id="app" class="{{ route_class() }}-page">
+  <div id="app">
 
     @include('layouts._header')
-
-    <div class="container">
-
-      @include('shared._messages')
-
+      @yield('banner')
       @yield('content')
-
-    </div>
-
     @include('layouts._footer')
   </div>
 

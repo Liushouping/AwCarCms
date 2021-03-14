@@ -26,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        \Illuminate\Pagination\Paginator::useBootstrap();
+        
         $table = config('admin.extensions.config.table', 'admin_config');
         if (Schema::hasTable($table)) {
             Config::load();
