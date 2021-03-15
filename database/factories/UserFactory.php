@@ -30,5 +30,7 @@ class UserFactory extends Factory
             'introduction' => $this->faker->sentence(),
             'avatar' => $this->faker->randomElement($avatars),
         ];
+
+        
     }
 }

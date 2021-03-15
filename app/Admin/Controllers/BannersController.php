@@ -26,23 +26,20 @@ class BannersController extends AdminController
     {
         $grid = new Grid(new Banner());
 
-        $grid->id('編號');
+        $grid->id('ID')->sortable();
         $grid->image('橫幅圖片')->image('/storage',200,200);
         $grid->title('橫幅名稱');
         $grid->description('描述');
         $grid->link('網址')->link();
-        $grid->alt('註解');
         $grid->order('排序');
         $grid->on_sale('是否顯示')->display(function ($value) {
             return $value ? '是' : '否';
         });
 
         $grid->actions(function ($actions) {
-            // $actions->disableView();
             $actions->disableDelete();
         });
         $grid->tools(function ($tools) {
-            // 禁用批量删除按钮
             $tools->batch(function ($batch) {
                 $batch->disableDelete();
             });
@@ -61,12 +58,10 @@ class BannersController extends AdminController
     {
         $show = new Show(Banner::findOrFail($id));
 
-        $show->id('ID');
         $show->title('橫幅名稱');
         $show->image('橫幅圖片')->image();
         $show->description('描述');
         $show->link('網址');
-        $show->alt('註解');
         $show->order('排序');
         $show->on_sale('是否顯示');
         $show->field('created_at', '創建時間');
@@ -89,7 +84,6 @@ class BannersController extends AdminController
         $form->image('image', '橫幅圖片')->rules('required|image')->removable();
         $form->text('description', '描述')->rules('required');
         $form->text('link','網址')->rules('required');
-        $form->text('alt','註解')->rules('required');
         $form->text('order', '排序')->rules('required');
         $form->radio('on_sale', '是否顯示')->options(['1' => '是', '0'=> '否'])->default('0');
 

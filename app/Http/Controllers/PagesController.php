@@ -13,7 +13,7 @@ class PagesController extends Controller
     {
         $banners = Banner::query()->where('on_sale', true)->orderBy('order','asc')->get();
         // $activitys = Activity::paginate(5);
-        $infos = Info::paginate(5);
+        $infos = Info::query()->where('on_sale', true)->orderBy('order','asc')->paginate(5);
         return view('pages.index', compact('banners','infos'));
     }
 

@@ -182,7 +182,7 @@ return [
     /*
      * 登录页背景图
      */
-    'login_background_image' => 'https://www.bootstrapdash.com/demo/star-laravel-free/template/assets/images/auth/login_1.jpg',
+    'login_background_image' => '',
 
     /*
      * 显示版本
@@ -192,7 +192,7 @@ return [
     /*
      * 显示环境
      */
-    'show_environment' => true,
+    'show_environment' => false,
 
     /*
      * 菜单绑定权限

@@ -16133,10 +16133,6 @@ readers do not read off random characters that represent icons */
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-* {
-  border: 0.25px solid red;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -16154,6 +16150,12 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+tbody a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -16178,6 +16180,12 @@ a:hover {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide h2 {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
 }
 
 /*--------------------------------------------------------------

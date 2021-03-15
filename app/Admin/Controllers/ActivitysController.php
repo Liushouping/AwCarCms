@@ -26,11 +26,10 @@ class ActivitysController extends AdminController
     {
         $grid = new Grid(new Activity());
 
-        // $grid->id('編號');
+        $grid->id('ID')->sortable();
         $grid->order('排序');
         $grid->image('封面')->image('/storage',200,200);
         $grid->title('名稱');
-        // $grid->body('內容');
         $grid->status('狀態')->using([
             0 => '準備',
             1 => '進行',
@@ -45,11 +44,9 @@ class ActivitysController extends AdminController
         $grid->end_date('結束時間');
 
         $grid->actions(function ($actions) {
-            // $actions->disableView();
             $actions->disableDelete();
         });
         $grid->tools(function ($tools) {
-            // 禁用批量删除按钮
             $tools->batch(function ($batch) {
                 $batch->disableDelete();
             });
@@ -68,10 +65,8 @@ class ActivitysController extends AdminController
     {
         $show = new Show(Activity::findOrFail($id));
 
-        $show->id('編號');
         $show->image('封面')->image();
         $show->title('名稱');
-        // $show->body('內容');
         $show->order('排序');
         $show->status('狀態')->using([
             0 => '準備',

@@ -15,7 +15,7 @@ class InfosController extends AdminController
      *
      * @var string
      */
-    protected $title = 'info';
+    protected $title = '最新資訊';
 
     /**
      * Make a grid builder.
@@ -26,18 +26,14 @@ class InfosController extends AdminController
     {
         $grid = new Grid(new Info());
 
-        $grid->id('編號');
+        $grid->id('ID')->sortable();
         $grid->order('排序');
         $grid->title('名稱');
-        // $grid->body('內容');
         $grid->on_sale('顯示')->using(['0' => '否', '1' => '是']);
-
         $grid->actions(function ($actions) {
-            // $actions->disableView();
             $actions->disableDelete();
         });
         $grid->tools(function ($tools) {
-            // 禁用批量删除按钮
             $tools->batch(function ($batch) {
                 $batch->disableDelete();
             });
@@ -56,10 +52,7 @@ class InfosController extends AdminController
     {
         $show = new Show(Info::findOrFail($id));
 
-        $show->id('編號');
-        // $show->image('封面')->image();
         $show->title('名稱');
-        // $show->body('內容');
         $show->order('排序');
         $show->on_sale('是否顯示')->using(['0' => '否', '1' => '是']);
         $show->created_at('創建時間');

@@ -3,8 +3,9 @@
     <div class="swiper-wrapper">
     @foreach($banners as $banner)
     <!-- <a href=""> -->
-        <div class="swiper-slide" style="background-image:url('{{$banner->image_url}}')">
-            <a href="{{$banner->link}}"></a>
+        <div class="swiper-slide" style="background-image:url('{{$banner->image_url}}');background-color: rgba(0, 0, 0, .4);background-blend-mode: multiply;">
+            <a href="{{ $banner->link }}"></a>
+            <h2>{{ $banner->title }}</h2>
         </div>
     <!-- </a> -->
     @endforeach

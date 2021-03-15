@@ -14,9 +14,9 @@
 # General
 --------------------------------------------------------------*/
 
-*{
-  border: 0.25px solid red;
-}
+// *{
+//   border: 0.25px solid red;
+// }
 
 html {
   position: relative;
@@ -36,6 +36,12 @@ a {
 a:hover {
   // color: #9eccf4;
   text-decoration: none;
+}
+
+tbody a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -58,10 +64,17 @@ a:hover {
 .swiper-container {
   margin-bottom: 60px;
 }
-.swiper-slide a{
+
+.swiper-slide a {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide h2 {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
 }
 
 /*--------------------------------------------------------------

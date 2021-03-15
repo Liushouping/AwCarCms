@@ -15,43 +15,29 @@ class UsersController extends AdminController
      *
      * @var string
      */
-    protected $title = '用户';
+    protected $title = '會員';
 
     protected function grid()
     {
         $grid = new Grid(new User);
-        // 创建一个列名为 ID 的列，内容是用户的 id 字段
-        $grid->id('ID');
 
-        // 创建一个列名为 用户名 的列，内容是用户的 name 字段。下面的 email() 和 created_at() 同理
-        $grid->name('用户名');
-
-        $grid->email('邮箱');
-
-        $grid->email_verified_at('已验证邮箱')->display(function ($value) {
+        $grid->id('ID')->sortable();
+        $grid->name('姓名');
+        $grid->email('信箱');
+        $grid->email_verified_at('已驗證信箱')->display(function ($value) {
             return $value ? '是' : '否';
         });
-
-        $grid->created_at('注册时间');
-
-        // 不在页面显示 `新建` 按钮，因为我们不需要在后台新建用户
+        $grid->created_at('註冊時間');
         $grid->disableCreateButton();
-        // 同时在每一行也不显示 `编辑` 按钮
         $grid->disableActions();
 
         $grid->tools(function ($tools) {
-            // 禁用批量删除按钮
             $tools->batch(function ($batch) {
                 $batch->disableDelete();
             });
         });
 
         $grid->filter(function($filter){
-
-            // 去掉默认的id过滤器
-            // $filter->disableIdFilter();
-
-            // 在这里添加字段过滤器
             $filter->between('created_at','創建時間')->datetime(['format' => 'YYYY-MM-DD']);
         });
         return $grid;

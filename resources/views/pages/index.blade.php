@@ -161,7 +161,7 @@
       breakpoints: {
         // when window width is >= 320px
         // when window width is >= 640px
-        640: {
+        960: {
           slidesPerView: 3,
           spaceBetween: 40
         }
@@ -171,5 +171,6 @@
         prevEl: '.sp2',
       },
     });
+
 </script>
 @stop
