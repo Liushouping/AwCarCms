@@ -21,4 +21,7 @@ Route::group([
 
     // 最新活動
     $router->resource('activitys', ActivitysController::class);
+
+    // 最新消息
+    $router->resource('infos', InfosController::class);
 });

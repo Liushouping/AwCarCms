@@ -19,7 +19,6 @@ class CreateBannersTable extends Migration
             $table->text('description')->nullable();
             $table->string('link')->nullable();
             $table->string('order');
-            $table->string('alt')->nullable();
             $table->string('image')->nullable();
             $table->boolean('on_sale')->default(true);
             $table->timestamps();

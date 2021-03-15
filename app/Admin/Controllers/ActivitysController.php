@@ -28,7 +28,7 @@ class ActivitysController extends AdminController
 
         // $grid->id('編號');
         $grid->order('排序');
-        $grid->image('封面')->image('/storage',75,75);
+        $grid->image('封面')->image('/storage',200,200);
         $grid->title('名稱');
         // $grid->body('內容');
         $grid->status('狀態')->using([

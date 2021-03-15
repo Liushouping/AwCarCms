@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActivitiesTable extends Migration
+class CreateInfosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('infos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title')->nullable()->index();
+            $table->string('title')->index();
             $table->string('image')->nullable();
             $table->text('body')->nullable();
-            $table->string('order')->nullable();
+            $table->string('order');
+            $table->string('status')->nullable();
             $table->boolean('on_sale')->default(true);
             $table->timestamps();
         });
@@ -31,6 +32,6 @@ class CreateActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activities');
+        Schema::dropIfExists('infos');
     }
 }

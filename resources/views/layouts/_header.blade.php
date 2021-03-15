@@ -2,7 +2,7 @@
 <div class="container">
     <!-- Branding Image -->
     <a class="navbar-brand " href="{{ url('/') }}">
-    LaraBBS
+    Thga
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,10 +18,15 @@
     <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
         @guest
-        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
+        <li class="nav-item"><a class="nav-link" href="">首頁</a></li>
+        <li class="nav-item"><a class="nav-link" href="">最新活動</a></li>
+        <li class="nav-item"><a class="nav-link" href="">常見問題</a></li>
+        <li class="nav-item"><a class="nav-link" href="">關於我們</a></li>
+        <li class="nav-item"><a class="nav-link" href="">聯絡我們</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li> -->
         @else
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle" width="30px" height="30px">
             {{ Auth::user()->name }}
@@ -37,7 +42,7 @@
                 </form>
             </a>
             </div>
-        </li>
+        </li> -->
         @endguest
     </ul>
     </div>

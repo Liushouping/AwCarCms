@@ -1,20 +1,17 @@
-<header>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-        @foreach($banners as $key => $banner)
-            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                <img src="{{$banner->image_url}}" class="d-block w-100" alt="...">
-            </div>
-        @endforeach
+<!-- Swiper -->
+<div class="swiper-container" id="swiper1">
+    <div class="swiper-wrapper">
+    @foreach($banners as $banner)
+    <!-- <a href=""> -->
+        <div class="swiper-slide" style="background-image:url('{{$banner->image_url}}')">
+            <a href="{{$banner->link}}"></a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    <!-- </a> -->
+    @endforeach
     </div>
-</header>
-
+<!-- Add Pagination -->
+<div class="swiper-pagination swiper-pagination-white s1"></div>
+<!-- Add Arrows -->
+<div class="swiper-button-next swiper-button-white sn1"></div>
+<div class="swiper-button-prev swiper-button-white sp1"></div>
+</div>
