@@ -10,8 +10,6 @@
   <title>@yield('title', '客家美食饗宴，消保宣導計畫') | 台灣客家美食交流協會</title>
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
-  @yield('style')
 </head>
 
 <body>
@@ -20,6 +18,7 @@
     @include('layouts._header')
     <!-- 橫幅 -->
     @yield('banner')
+    @yield('bg-header')
     <!-- 內容 -->
       @yield('content')
     <!-- 頁尾 -->
@@ -28,11 +27,9 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
-  @yield('script')
 
   <script>
   $(document).ready(function() {
-    
     $('button').on('click', function() {
       if($(this).hasClass('nav-button')) {
         $('nav div').addClass('show');

@@ -14,7 +14,10 @@ class PagesController extends Controller
         $banners = Banner::query()->where('on_sale', true)->orderBy('order','asc')->get();
         // $activitys = Activity::paginate(5);
         $infos = Info::query()->where('on_sale', true)->orderBy('order','asc')->paginate(5);
+        // dd($banners);
         return view('pages.index', compact('banners','infos'));
+
+
     }
 
     // public function ShowActivity($id)
@@ -26,6 +29,14 @@ class PagesController extends Controller
     public function ShowInfo($id)
     {
         $infos = Info::find($id);
-        return view('infos.show', compact('infos'));
+        $dates  = Info::latest()->take(5)->get();
+
+        // get previous post id
+        $previous = Info::where('id', '<', $infos->id)->max('id');
+        // get next post id
+        $next = Info::where('id', '>', $infos->id)->min('id');
+
+        // dd($date);
+        return view('infos.show', compact('infos','dates','previous','next'));
     }
 }

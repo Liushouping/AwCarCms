@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 // 頁面相關
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('home');
 Route::get('activity/{id}', 'PagesController@ShowActivity')->name('activity.showactivity');
 Route::get('info/{id}', 'PagesController@ShowInfo')->name('info.showInfo');
 

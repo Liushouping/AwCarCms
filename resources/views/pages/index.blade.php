@@ -16,7 +16,7 @@
     </div>
     <div class="col-md-6">
       <div class="d-flex justify-content-between mb-4">
-        <h1 class="display-5"><i class="fas fa-dungeon"></i> 精彩回顧</h1>
+        <h1 class="display-5"><i class="fas fa-bookmark"></i> 精彩回顧</h1>
         </div>
         <!-- 16:9 aspect ratio -->
         <div class="embed-responsive embed-responsive-16by9">
@@ -91,55 +91,4 @@
   </div> -->
   <!--  -->
   </div>
-@stop
-
-@section('style')
-
-@stop
-
-@section('script')
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper1 = new Swiper('#swiper1', {
-      spaceBetween: 30,
-      effect: 'fade',
-      loop: true,
-      autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.s1',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.sn1 ',
-        prevEl: '.sp1',
-      },
-    });
-
-    var swiper2 = new Swiper('#swiper2', {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      loopFillGroupWithBlank: true,
-      breakpoints: {
-        // when window width is >= 320px
-        // when window width is >= 640px
-        960: {
-          slidesPerView: 3,
-          spaceBetween: 40
-        }
-      },
-      navigation: {
-        nextEl: '.sn2',
-        prevEl: '.sp2',
-      },
-    });
-</script>
 @stop
