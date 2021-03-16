@@ -2,7 +2,7 @@
   <tbody>
   @foreach ($infos as $info)
     <tr>
-      <td>
+      <td style="font-size:16px">
       <a href="{{ route('info.showInfo', $info->id) }}">
       {{ $info->created_at->format ('Y-m-d')}}
       &nbsp&nbsp&nbsp

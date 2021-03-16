@@ -18,7 +18,7 @@ class CreateActivitiesTable extends Migration
             $table->string('title')->nullable()->index();
             $table->string('image')->nullable();
             $table->text('body')->nullable();
-            $table->string('order')->nullable();
+            $table->integer('order');
             $table->boolean('on_sale')->default(true);
             $table->string('status')->nullable();
             $table->date('start_date')->nullable();

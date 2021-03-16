@@ -25,7 +25,7 @@
     </div>
   </div>
   <!-- 立刻加入我們 -->
-  <div section class="mb-5 mt-5">
+  <div section class="mt-5">
     <div class="p-5 rounded" style="background-color: #2E3D80;">
       <div class="row justify-content-around">
         <div class="col-md-8">
@@ -39,17 +39,17 @@
     </div>
   </div>
   <!-- 合作夥伴 -->
-  <div class="mx-auto text-center mt-5">
+  <!-- <div class="mx-auto text-center mt-5">
   <h1 class="display-5">合作夥伴</h1>
   </div>
   <div class="swiper-container" id="swiper2">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="https://balloontaiwan.taitung.gov.tw/content/images/index/helper-02.png" class="w-100">
+        <img src="https://balloontaiwan.taitung.gov.tw/Content/images/index/sponsor-04.png" class="w-100">
 
       </div>
       <div class="swiper-slide">
-        <img src="https://balloontaiwan.taitung.gov.tw/content/images/index/helper-02.png" class="w-100">
+        <img src="https://balloontaiwan.taitung.gov.tw/Content/images/index/sponsor-12.png" class="w-100">
 
       </div>
       <div class="swiper-slide">
@@ -86,45 +86,15 @@
       </div>
 
     </div>
-    <!-- Add Pagination -->
-    <!-- <div class="swiper-pagination s2"></div> -->
-    <!-- Add Arrows -->
     <div class="swiper-button-next sn2"></div>
     <div class="swiper-button-prev sp2"></div>
-  </div>
+  </div> -->
   <!--  -->
   </div>
 @stop
 
 @section('style')
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<style>
-  #swiper1 {
-    width: 100%;
-    height: 300px;
-  }
 
-  .swiper-slide {
-    background-position: top center;
-    background-size: cover;
-    font-size: 18px;
-    color: #fff;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 40px 60px;
-  }
-
-  /* .swiper-slide .title {
-    font-size: 41px;
-    font-weight: bold;
-  }
-
-  .swiper-slide .text {
-    font-size: 14px;
-    max-width: 400px;
-    line-height: 1.3;
-  } */
-</style>
 @stop
 
 @section('script')
@@ -135,7 +105,7 @@
       effect: 'fade',
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 10000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -171,6 +141,5 @@
         prevEl: '.sp2',
       },
     });
-
 </script>
 @stop

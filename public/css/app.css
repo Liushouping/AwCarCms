@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush|Overpass+Mono:600,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -16158,20 +16160,43 @@ tbody a {
   height: 100%;
 }
 
-/*--------------------------------------------------------------
-# navbar
---------------------------------------------------------------*/
-.navbar-static-top {
-  border-color: #e7e7e7;
-  background-color: #fff;
-  box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-bottom: 1px solid #e8e8e8;
-  margin-top: 0px;
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-bottom: 120px;
+}
+
+p {
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------
 # banner
 --------------------------------------------------------------*/
+#swiper1 {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  background-position: top center;
+  background-size: cover;
+  font-size: 18px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
 .swiper-container {
   margin-bottom: 60px;
 }
@@ -16182,12 +16207,6 @@ tbody a {
   height: 100%;
 }
 
-.swiper-slide h2 {
-  position: absolute;
-  bottom: 40px;
-  right: 80px;
-}
-
 /*--------------------------------------------------------------
 # footer
 --------------------------------------------------------------*/
@@ -16195,7 +16214,6 @@ tbody a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #3a3a3a;
 }
@@ -16205,7 +16223,7 @@ tbody a {
 }
 .footer .container p {
   margin: 19px 0;
-  color: #c1c1c1;
+  color: #888;
 }
 .footer .container p a {
   color: inherit;
@@ -16219,4 +16237,130 @@ tbody a {
   border: 1px solid #ced4da;
   border-radius: 4px;
   padding: 3px;
+}
+
+/*--------------------------------------------------------------
+# Header & Menu
+--------------------------------------------------------------*/
+header nav {
+  padding: 15px 35px;
+  display: flex;
+  position: relative;
+}
+header nav h2 {
+  margin-bottom: 0;
+  flex: 1;
+  letter-spacing: 3px;
+  font-family: "Overpass Mono", monospace !important;
+}
+header nav h2 #logo {
+  color: #000;
+  text-transform: uppercase;
+}
+header nav .nav-button {
+  color: #000;
+  font-size: 23px;
+}
+header nav div {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+header nav div ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header nav div ul .exit-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: lightgray;
+  font-size: 20px;
+  padding: 10px;
+}
+header nav div ul li {
+  font-family: "PT Sans", sans-serif !important;
+  text-transform: uppercase;
+}
+header nav div ul li a {
+  display: block;
+  font-size: 21px;
+  color: lightgray;
+  padding: 15px 5px;
+  transition: all 0.4s;
+}
+header nav div ul li a:hover, header nav div ul li a .active:hover {
+  color: #be8040;
+  border-bottom-color: #be8040;
+}
+header nav div.show {
+  transform: scale(1);
+  opacity: 1;
+}
+header .menu {
+  padding: 30px;
+}
+header .menu-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+header .menu-images img {
+  width: 100%;
+}
+@media (min-width: 769px) {
+  header nav {
+    position: initial !important;
+    align-items: baseline;
+    padding: 20px 70px !important;
+  }
+  header nav .nav-button {
+    display: none;
+  }
+  header nav div {
+    position: initial !important;
+    background: none !important;
+    opacity: initial !important;
+    transform: initial !important;
+  }
+  header nav div ul {
+    position: initial !important;
+    flex-direction: row !important;
+  }
+  header nav div ul .exit-menu {
+    display: none;
+    color: #000 !important;
+  }
+  header nav div ul li a {
+    font-size: 16px;
+    margin: 0 20px;
+    letter-spacing: 3px;
+    padding: 5px 0 !important;
+    color: #000 !important;
+    transition: all 0.4s;
+  }
+  header nav div ul li a:hover, header nav div ul li a .active:hover {
+    color: #be8040 !important;
+    border-bottom-color: #be8040 !important;
+  }
+  header nav div ul .active {
+    border-bottom: solid 1px #be8040 !important;
+  }
+  header .menu-images {
+    flex: 1;
+  }
+  header .menu div:last-child {
+    flex: 1;
+  }
 }

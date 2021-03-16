@@ -27,8 +27,8 @@ class InfosController extends AdminController
         $grid = new Grid(new Info());
 
         $grid->id('ID')->sortable();
-        $grid->order('排序');
         $grid->title('名稱');
+        $grid->order('排序')->sortable();
         $grid->on_sale('顯示')->using(['0' => '否', '1' => '是']);
         $grid->actions(function ($actions) {
             $actions->disableDelete();

@@ -18,7 +18,7 @@ class CreateInfosTable extends Migration
             $table->string('title')->index();
             $table->string('image')->nullable();
             $table->text('body')->nullable();
-            $table->string('order');
+            $table->integer('order');
             $table->string('status')->nullable();
             $table->boolean('on_sale')->default(true);
             $table->timestamps();

@@ -27,9 +27,8 @@ class ActivitysController extends AdminController
         $grid = new Grid(new Activity());
 
         $grid->id('ID')->sortable();
-        $grid->order('排序');
-        $grid->image('封面')->image('/storage',200,200);
         $grid->title('名稱');
+        $grid->image('封面')->image('/storage',200,200);
         $grid->status('狀態')->using([
             0 => '準備',
             1 => '進行',
@@ -39,6 +38,7 @@ class ActivitysController extends AdminController
             1 => 'success',
             2 => 'danger',
         ], 'warning');
+        $grid->order('排序')->sortable();
         $grid->on_sale('顯示')->using(['0' => '否', '1' => '是']);
         $grid->start_date('開始時間');
         $grid->end_date('結束時間');

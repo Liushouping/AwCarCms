@@ -10,6 +10,17 @@
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+// Font
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Overpass+Mono:600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+// 
+$OverpassMonoFont: 'Overpass Mono', monospace;
+$PTSansFont: 'PT Sans', sans-serif;
+$AlexBrushFont: 'Alex Brush', cursive;
+$lightbrown: rgb(190, 128, 64);
+$lightgray: rgb(35,35,35);
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -44,22 +55,44 @@ tbody a {
   height: 100%;
 }
 
-/*--------------------------------------------------------------
-# navbar
---------------------------------------------------------------*/
+button {
+  border:0;
+  background:0;
+  cursor:pointer;
+}
 
-.navbar-static-top {
-  border-color: #e7e7e7;
-  background-color: #fff;
-  box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
-  border-bottom: 1px solid #e8e8e8;
-  // margin-bottom: 40px;
-  margin-top: 0px;
+ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.container {
+  margin-bottom: 120px;;
+}
+
+p {
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------
 # banner
 --------------------------------------------------------------*/
+
+#swiper1 {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  background-position: top center;
+  background-size: cover;
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
 
 .swiper-container {
   margin-bottom: 60px;
@@ -71,12 +104,6 @@ tbody a {
   height: 100%;
 }
 
-.swiper-slide h2 {
-  position: absolute;
-  bottom: 40px;
-  right: 80px;
-}
-
 /*--------------------------------------------------------------
 # footer
 --------------------------------------------------------------*/
@@ -85,7 +112,6 @@ tbody a {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
     height: 60px;
     // margin-top:  60px;
     background-color: rgb(58, 58, 58);
@@ -96,7 +122,7 @@ tbody a {
   
       p {
         margin: 19px 0;
-        color: #c1c1c1;
+        color: #888;
   
         a {
           color: inherit;
@@ -116,5 +142,139 @@ tbody a {
       border-radius: 4px;
       padding: 3px;
     }
+}
+
+/*--------------------------------------------------------------
+# Header & Menu
+--------------------------------------------------------------*/
+
+header {
+  nav {
+    padding:15px 35px;
+    display:flex;
+    position:relative;
+    h2 {
+      margin-bottom:0;
+      flex:1;
+      letter-spacing:3px;
+      font-family: $OverpassMonoFont !important;
+      #logo {
+        color:#000;
+        text-transform:uppercase;
+      }
+    }
+    .nav-button {
+      color: #000;
+      font-size:23px;
+    }
+    div {
+      background:rgba(0,0,0,.9);
+      position:fixed;
+      right:0;
+      left:0;
+      top:0;
+      bottom:0;
+      z-index:999;
+      text-align:center;
+      transform:scale(0);
+      opacity:0;
+      transition:opacity .2s;
+      ul {
+        position:relative;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        .exit-menu {
+          position:absolute;
+          top:15px;
+          right:15px;
+          color:lightgray;
+          font-size:20px;
+          padding:10px;
+        }
+        li {
+          font-family: $PTSansFont !important;
+          text-transform:uppercase;
+          a {
+            display:block;
+            font-size: 21px;
+            color:lightgray;
+            padding:15px 5px;
+            transition: all .4s;
+            &:hover, .active:hover {
+              color: $lightbrown;
+              border-bottom-color: $lightbrown;
+            }
+          }
+        }
+      }
+    }
+  }
+
+nav div.show {
+  transform:scale(1);
+  opacity:1;
+}
+
+.menu {
+  padding:30px;
+  &-images {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:10px;
+    img {
+      width:100%;
+    }
+  }
+}
+
+@media(min-width:769px) {
+  nav {
+    position:initial !important;
+    align-items:baseline;
+    padding: 20px 70px !important;
+    .nav-button {
+      display:none;
+    }
+    div {
+      position:initial !important;
+      background:none !important;
+      opacity:initial !important;
+      transform:initial !important;
+      ul {
+        position:initial !important;
+        flex-direction:row !important;
+        .exit-menu {
+          display:none;
+          color:#000 !important;
+        }
+        li a{
+          font-size: 16px;
+          margin:0 20px;
+          letter-spacing:3px;
+          padding:5px 0 !important;
+          color:#000 !important;
+          transition: all .4s;
+          &:hover, .active:hover {
+            color: $lightbrown !important;
+            border-bottom-color: $lightbrown !important;
+          }
+        }
+        .active {
+            border-bottom:solid 1px $lightbrown !important;
+          }
+      }
+    }
+  }
+  .menu {
+    &-images {
+      flex:1;
+    }
+    div:last-child {
+      flex:1;
+    }
+  }
+}
 }
   
