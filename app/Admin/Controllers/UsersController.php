@@ -17,10 +17,11 @@ class UsersController extends AdminController
      */
     protected $title = '會員';
 
+    
     protected function grid()
     {
         $grid = new Grid(new User);
-
+        $grid->model()->orderBy('created_at', 'asc');
         $grid->id('ID')->sortable();
         $grid->name('姓名');
         $grid->email('信箱');

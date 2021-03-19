@@ -25,7 +25,7 @@ class ActivitysController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Activity());
-
+        $grid->model()->orderBy('created_at', 'asc');
         $grid->id('ID')->sortable();
         $grid->title('名稱');
         $grid->image('封面')->image('/storage',200,200);
@@ -42,14 +42,10 @@ class ActivitysController extends AdminController
         $grid->on_sale('顯示')->using(['0' => '否', '1' => '是']);
         $grid->start_date('開始時間');
         $grid->end_date('結束時間');
+        $grid->created_at('創建時間');
 
         $grid->actions(function ($actions) {
-            $actions->disableDelete();
-        });
-        $grid->tools(function ($tools) {
-            $tools->batch(function ($batch) {
-                $batch->disableDelete();
-            });
+            $actions->disableView();
         });
 
         return $grid;
@@ -97,7 +93,7 @@ class ActivitysController extends AdminController
 
         $form->text('title', '名稱')->rules('required');
         $form->text('order', '排序')->rules('required');
-        $form->image('image', '封面')->rules('required|image')->removable();
+        $form->image('image', '封面')->rules('required|image')->removable()->help('上傳前請先將圖片壓縮');
         $form->radio('on_sale', '是否顯示')->options(['1' => '是', '0'=> '否'])->default('0');
         $form->dateRange('start_date', 'end_date', '活動期間');
         $form->select('status','狀態')->options([0 => '準備', 1 => '進行', 2 => '結束']);

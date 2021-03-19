@@ -11,6 +11,20 @@ class Activity extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
 
+    protected $fillable = [
+        'title',
+        'body',
+        'order',
+        'image',
+        'status',
+    ];
+
+    protected $casts = [
+        'on_sale' => 'boolean',
+    ];
+    
+
+
     public function getImageUrlAttribute()
     {
         // 如果 image 字段本身就已经是完整的 url 就直接返回

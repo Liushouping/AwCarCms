@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Routing\Router;
+use App\Admin\Controllers\Setting;
 
 Admin::routes();
 
@@ -19,9 +20,18 @@ Route::group([
     // 廣告橫幅
     $router->resource('banners', BannersController::class);
 
-    // 最新活動
+    // 最新優惠
     $router->resource('activitys', ActivitysController::class);
 
-    // 最新消息
-    $router->resource('infos', InfosController::class);
+    // 超跑車款
+    $router->resource('cars', CarsController::class);
+
+    // 性能車款
+    $router->resource('powers', PowersController::class);
+
+    // 租車流程
+    $router->resource('sops', SopsController::class);
+
+    // 租車須知
+    $router->resource('notices', NoticesController::class);
 });

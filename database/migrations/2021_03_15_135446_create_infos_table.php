@@ -17,7 +17,7 @@ class CreateInfosTable extends Migration
             $table->bigIncrements('id');
             $table->string('title')->index();
             $table->string('image')->nullable();
-            $table->text('body')->nullable();
+            $table->longText('body')->nullable();
             $table->integer('order');
             $table->string('status')->nullable();
             $table->boolean('on_sale')->default(true);

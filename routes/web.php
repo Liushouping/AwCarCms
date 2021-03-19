@@ -4,11 +4,22 @@ use Illuminate\Support\Facades\Route;
 
 // 頁面相關
 Route::get('/', 'PagesController@index')->name('home');
+
+Route::get('cars', 'PagesController@car')->name('car');
+
+Route::get('sop', 'PagesController@sop')->name('sop');
+
+Route::get('notice', 'PagesController@notice')->name('notice');
+
+Route::get('powers', 'PagesController@power')->name('power');
+
+Route::get('contact', 'PagesController@contact')->name('contact');
+
+Route::get('activity', 'PagesController@activity')->name('activity.indexActivity');
 Route::get('activity/{id}', 'PagesController@ShowActivity')->name('activity.showactivity');
-Route::get('info/{id}', 'PagesController@ShowInfo')->name('info.showInfo');
 
 // 用戶相關
-Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+// Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
 // 用户身份驗證相關的路由
-Auth::routes();
+// Auth::routes();

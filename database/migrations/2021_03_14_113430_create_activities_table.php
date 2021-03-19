@@ -17,7 +17,7 @@ class CreateActivitiesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title')->nullable()->index();
             $table->string('image')->nullable();
-            $table->text('body')->nullable();
+            $table->longText('body')->nullable();
             $table->integer('order');
             $table->boolean('on_sale')->default(true);
             $table->string('status')->nullable();

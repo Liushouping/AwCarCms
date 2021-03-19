@@ -5,38 +5,61 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Activity;
-use App\Models\Info;
+use App\Models\Sop;
+use App\Models\Notice;
+use App\Models\Car;
+use App\Models\Power;
 
 class PagesController extends Controller
 {
     public function index()
     {
         $banners = Banner::query()->where('on_sale', true)->orderBy('order','asc')->get();
-        // $activitys = Activity::paginate(5);
-        $infos = Info::query()->where('on_sale', true)->orderBy('order','asc')->paginate(5);
-        // dd($banners);
-        return view('pages.index', compact('banners','infos'));
-
-
+        $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
+        return view('pages.index', compact('banners','activitys'));
     }
 
-    // public function ShowActivity($id)
-    // {
-    //     $activitys = Activity::find($id);
-    //     return view('activities.show', compact('activitys'));
-    // }
-
-    public function ShowInfo($id)
+    public function contact()
     {
-        $infos = Info::find($id);
-        $dates  = Info::latest()->take(5)->get();
+        return view('pages.contact');
+    }
 
-        // get previous post id
-        $previous = Info::where('id', '<', $infos->id)->max('id');
-        // get next post id
-        $next = Info::where('id', '>', $infos->id)->min('id');
+    public function sop()
+    {
+        $sops = Sop::all();
+        return view('pages.sop',compact('sops'));
+    }
 
-        // dd($date);
-        return view('infos.show', compact('infos','dates','previous','next'));
+    public function notice()
+    {
+        $notices = Notice::all();
+        return view('pages.notice',compact('notices'));
+    }
+
+    public function car()
+    {
+        $cars = Car::all();
+        return view('cars.index',compact('cars'));
+    }
+
+    public function power()
+    {
+        $powers = Power::all();
+        return view('powers.index',compact('powers'));
+    }
+
+    public function Activity()
+    {
+        $activitys = Activity::orderBy('created_at','asc')->orderBy('order','asc')->paginate(6);
+        return view('activities.index', compact('activitys'));
+    }
+
+    public function ShowActivity($id)
+    {
+        $activitys = Activity::find($id);
+        $dates  = Activity::latest()->take(5)->get();
+        $previous = Activity::where('id', '<', $activitys->id)->max('id');
+        $next = Activity::where('id', '>', $activitys->id)->min('id');
+        return view('activities.show', compact('activitys','dates','previous','next'));
     }
 }

@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Encore\Admin\Widgets\InfoBox;
 
 class BannersController extends AdminController
 {
@@ -25,7 +26,7 @@ class BannersController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Banner());
-
+        $grid->model()->orderBy('created_at', 'asc');
         $grid->id('ID')->sortable();
         $grid->title('橫幅名稱');
         $grid->image('橫幅圖片')->image('/storage',200,200)->help('3840 x 820 會壓縮 1200 x 300');
@@ -37,14 +38,9 @@ class BannersController extends AdminController
         });
 
         $grid->actions(function ($actions) {
-            $actions->disableDelete();
+            $actions->disableView();
         });
-        $grid->tools(function ($tools) {
-            $tools->batch(function ($batch) {
-                $batch->disableDelete();
-            });
-        });
-
+        
         return $grid;
     }
 

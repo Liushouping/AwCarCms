@@ -20,27 +20,3 @@ require('./bootstrap');
       prevEl: '.sp1',
     },
 });
-
-const swiper2 = new Swiper('#swiper2', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    loopFillGroupWithBlank: true,
-    breakpoints: {
-      // when window width is >= 320px
-      // when window width is >= 640px
-      960: {
-        slidesPerView: 3,
-        spaceBetween: 40
-      }
-    },
-    navigation: {
-      nextEl: '.sn2',
-      prevEl: '.sp2',
-    },
-  });

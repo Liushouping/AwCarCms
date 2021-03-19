@@ -10,13 +10,19 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 class Banner extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
-    // protected $fillable = [
-    //     'title', 'description', 'image', 'on_sale', 
-    //     'rating', 'sold_count', 'review_count', 'price'
-    // ];
-    // protected $casts = [
-    // 'on_sale' => 'boolean', // on_sale 是一个布尔类型的字段
-    // ];
+
+    protected $fillable = [
+        'title',
+        'description',
+        'link',
+        'order',
+        'image'
+    ];
+
+    protected $casts = [
+        'on_sale' => 'boolean',
+    ];
+    
 
     public function getImageUrlAttribute()
     {
