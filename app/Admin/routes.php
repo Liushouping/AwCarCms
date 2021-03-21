@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Routing\Router;
-use App\Admin\Controllers\Setting;
+
 
 Admin::routes();
 
@@ -15,7 +15,7 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
 
     // 會員相關
-    $router->get('users', 'UsersController@index');
+    // $router->get('users', 'UsersController@index');
 
     // 廣告橫幅
     $router->resource('banners', BannersController::class);

@@ -8,13 +8,13 @@
 
 @section('content')
 <div class="container">
-<div class="row row-cols-1 row-cols-md-2">
-
+<small><a href="{{ route('home') }}">:: 首頁</a> > 性能車款</small>
+<div class="row row-cols-1 row-cols-md-2 mt-3">
 @foreach( $powers as $power )
   <div class="col-lg-4 mb-4">
-    <div class="card p-3">
+    <div class="card">
       <img src="{{$power->image_url}}" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body p-3">
         <h5 class="card-title">{{$power->title}}</h5>
         <p class="card-text">
         車型：{{$power->model}}<br>
@@ -28,8 +28,6 @@
     </div>
   </div>
 @endforeach
-
-
 </div>
 </div>
 @stop

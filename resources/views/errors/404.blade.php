@@ -1,131 +1,19 @@
-<style>
+@extends('layouts.app')
 
-html {
-  background: radial-gradient(#000, #111);
-  color: white;
-  overflow: hidden;
-  height: 100%;
-  user-select: none;
-}
+@section('bg-header')
+<div class="d-flex justify-content-center align-items-center mb-5"  style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);width:100%;height:250px;">
+  <h2 class="display-4 display-xs-5 font-weight-bolder text-white">:: 錯誤訊息</h2>
+</div>
+@stop
 
-.static {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: -100px;
-  opacity: 0.05;
-  z-index: 230;
-  user-select: none;
-  user-drag: none;
-}
-
-.error {
-  text-align: center;
-  font-family: 'Gilda Display', serif;
-  font-size: 95px;
-  font-style: italic;
-  text-align: center;
-  width: 100px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -60px;
-  right: 0;
-  animation: noise 2s linear infinite;
-  overflow: default;
-}
-
-.error:after {
-  content: '404';
-  font-family: 'Gilda Display', serif;
-  font-size: 100px;
-  font-style: italic;
-  text-align: center;
-  width: 150px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  color: blue;
-  animation: noise-1 .2s linear infinite;
-}
-
-.info {
-  text-align: center;
-  font-family: 'Gilda Display', serif;
-  font-size: 15px;
-  font-style: italic;
-  text-align: center;
-  width: 200px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 140px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  animation: noise-3 1s linear infinite;
-}
-
-.error:before {
-  content: '404';
-  font-family: 'Gilda Display', serif;
-  font-size: 100px;
-  font-style: italic;
-  text-align: center;
-  width: 100px;
-  height: 60px;
-  line-height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  color: red;
-  animation: noise-2 .2s linear infinite;
-}
-
-@keyframes noise-1 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: 2px;}
-}
-
-@keyframes noise-2 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: -2px;}
-}
-
-@keyframes noise {
-  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
-  4.3% {opacity: 1; transform: scaleY(1.7);}
-  43% {opacity: 1; transform: scaleX(1.5);}
-}
-
-@keyframes noise-3 {
-  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
-  4.3% {opacity: 1; transform: scaleY(4);}
-  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
-}</style>
-<div class="error">404</div>
-<br /><br />
-<span class="info">File not found</span>
-<img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static" />
+@section('content')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5 mb-5 text-center">
+      <h1 class="font-weight-bolder display-1">404</h1>
+      <br>
+      <h1 class="font-weight-light display-5">Not Found</h1>
+    </div>
+  </div>
+</div>
+@stop

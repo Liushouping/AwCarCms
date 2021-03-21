@@ -11,6 +11,23 @@ class Car extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'model',
+        'engine',
+        '​exhaust',
+        'max_horsepower',
+        '​max_torque',
+        'price',
+        'order',
+        'phone'
+    ];
+
+    protected $casts = [
+        'on_sale' => 'boolean',
+    ];
+
     public function getImageUrlAttribute()
     {
         // 如果 image 字段本身就已经是完整的 url 就直接返回

@@ -19,11 +19,6 @@ class PagesController extends Controller
         return view('pages.index', compact('banners','activitys'));
     }
 
-    public function contact()
-    {
-        return view('pages.contact');
-    }
-
     public function sop()
     {
         $sops = Sop::all();
@@ -38,19 +33,19 @@ class PagesController extends Controller
 
     public function car()
     {
-        $cars = Car::all();
+        $cars = Car::query()->where('on_sale', true)->orderBy('order','asc')->get();
         return view('cars.index',compact('cars'));
     }
 
     public function power()
     {
-        $powers = Power::all();
+        $powers = Power::query()->where('on_sale', true)->orderBy('order','asc')->get();
         return view('powers.index',compact('powers'));
     }
 
     public function Activity()
     {
-        $activitys = Activity::orderBy('created_at','asc')->orderBy('order','asc')->paginate(6);
+        $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
         return view('activities.index', compact('activitys'));
     }
 

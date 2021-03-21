@@ -10,6 +10,23 @@ use Encore\Admin\Traits\DefaultDatetimeFormat;
 class Power extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
+    
+    protected $fillable = [
+        'title',
+        'description',
+        'model',
+        'engine',
+        '​exhaust',
+        'max_horsepower',
+        '​max_torque',
+        'price',
+        'order',
+        'phone'
+    ];
+
+    protected $casts = [
+        'on_sale' => 'boolean',
+    ];
 
     public function getImageUrlAttribute()
     {

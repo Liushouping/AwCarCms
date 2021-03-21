@@ -13,6 +13,7 @@
 
 <body>
   <div id="app">
+    @include('sweetalert::alert')
     <!-- 導覽 -->
     @include('layouts._header')
     <!-- 橫幅 -->
@@ -27,6 +28,8 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   @yield('script')
   <script>
   $(document).ready(function() {
@@ -40,6 +43,13 @@
         $('html,body').animate({scrollTop:0}, 'slow');
       }
     });
+  });
+
+  AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false
   });
   </script>
 </body>

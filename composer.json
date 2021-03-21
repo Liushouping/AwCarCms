@@ -21,8 +21,8 @@
         "laravel-admin-ext/media-manager": "1.x",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "mews/captcha": "~3.0",
-        "overtrue/laravel-lang": "~4.0"
+        "overtrue/laravel-lang": "~4.0",
+        "realrashid/sweet-alert": "^3.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.5",

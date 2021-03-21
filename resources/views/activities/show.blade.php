@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 p-4 ckeditor">
-        <small><a href="{{ route('home') }}">:: 首頁</a> > <a href="activity.indexActivity" class="text-secondary">最新優惠</a></small>
+        <small><a href="{{ route('home') }}">:: 首頁</a> > 最新優惠</small>
 
         <h2 class="font-weight-bolder mb-4 mt-5">{{ $activitys->title }}</h2>
         <small>發佈時間：{{ $activitys->created_at }}</small>

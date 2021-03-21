@@ -13,8 +13,9 @@
     <div class="container">
       <div class="row">
         <div class="col pl-5 pr-5 mb-5">
+        <small><a href="{{ route('home') }}">:: 首頁</a> > 租車流程</small>
           @foreach($notices as $notice)
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between mt-3">
           <h5>{{ $notice->title }}</h5>
           <p>更新時間：{{$notice->created_at}}</p>
           </div>

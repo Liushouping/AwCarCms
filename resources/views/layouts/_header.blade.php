@@ -13,7 +13,7 @@
         <li><a href="{{ route('power') }}">性能車款</a></li>
         <li><a href="{{ route('sop') }}">租車流程</a></li>
         <li><a href="{{ route('notice') }}">租車須知</a></li>
-        <li><a href="{{ route('contact') }}">聯絡我們</a></li>
+        <li><a href="/contact">聯絡我們</a></li>
       </ul>
     </div>
   </nav>

@@ -2,6 +2,7 @@ require('./bootstrap');
 
  // import Swiper bundle with all modules installed
  import Swiper from 'swiper/bundle';
+ 
  import 'swiper/swiper-bundle.css';
  const swiper1 = new Swiper('#swiper1', {
     spaceBetween: 30,

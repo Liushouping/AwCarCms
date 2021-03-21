@@ -10,12 +10,12 @@ return [
     /*
      * 页面顶部 Logo
      */
-    'logo' => '<b>Thga</b>',
+    'logo' => '<b>AW</b>',
 
     /*
      * 页面顶部小 Logo
      */
-    'logo-mini' => '<b>Th</b>',
+    'logo-mini' => '<b>AW</b>',
 
     /*
      * Laravel-Admin 启动文件路径
@@ -42,7 +42,7 @@ return [
     /*
      * Laravel-Admin 页面标题
      */
-    'title' => 'Thga 管理後台',
+    'title' => 'AW 管理後台',
 
     /*
      * 是否使用 https

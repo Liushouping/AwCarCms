@@ -22,7 +22,7 @@
             <a class="nav-link" href="{{ route('notice') }}">租車資訊</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('contact') }}">聯絡我們</a>
+            <a class="nav-link" href="/contact">聯絡我們</a>
           </li>
 
         </ul>
@@ -52,10 +52,10 @@
             <span class="footer-title">客戶服務</span>
           </li>
           <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-mobile-alt"></i> <a href="tel:+886-988081658">+886-988-081-658</a></span>
+            <span class="nav-link"><i class="fas fa-mobile-alt"></i> <a href="tel:{{ config('phone') }}">{{ config('phone') }}</a></span>
           </li>
           <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-phone-alt"></i><a href="tel:0277163255">02-7716-3255</a></span>
+            <span class="nav-link"><i class="fas fa-phone-alt"></i><a href="tel:{{ config('tel') }}">{{ config('tel') }}</a></span>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fab fa-line"></i>&nbsp;&nbsp;alstonwilliams</a>

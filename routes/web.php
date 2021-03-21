@@ -13,7 +13,9 @@ Route::get('notice', 'PagesController@notice')->name('notice');
 
 Route::get('powers', 'PagesController@power')->name('power');
 
-Route::get('contact', 'PagesController@contact')->name('contact');
+Route::resource('contact', ContactsController::class)->only([
+    'index', 'store'
+]);
 
 Route::get('activity', 'PagesController@activity')->name('activity.indexActivity');
 Route::get('activity/{id}', 'PagesController@ShowActivity')->name('activity.showactivity');

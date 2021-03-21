@@ -8,13 +8,14 @@
 
 @section('content')
 <div class="container">
-<div class="row row-cols-1 row-cols-md-2">
+<small><a href="{{ route('home') }}">:: 首頁</a> > 超跑車款</small>
+<div class="row row-cols-1 row-cols-md-2 mt-3">
 
 @foreach( $cars as $car )
   <div class="col-lg-4 mb-4">
-    <div class="card p-3">
+    <div class="card icon-box">
       <img src="{{$car->image_url}}" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body p-3">
         <h5 class="card-title">{{$car->title}}</h5>
         <p class="card-text">
         車型：{{$car->model}}<br>
@@ -24,8 +25,8 @@
         ​最大扭力：{{$car->​max_torque}}<br>
         租金：{{$car->price}}
         </p>
-<button type="button" class="btn btn-primary btn-lg btn-block">聯絡電話  <i class="fas fa-phone-alt"></i></button>
-<button type="button" class="btn btn-danger btn-lg btn-block">登記詢問  <i class="fas fa-angle-double-right"></i></button>
+<!-- <button type="button" class="btn btn-primary btn-lg btn-block">聯絡電話  <i class="fas fa-phone-alt"></i></button>
+<button type="button" class="btn btn-danger btn-lg btn-block">登記詢問  <i class="fas fa-angle-double-right"></i></button> -->
       </div>
     </div>
   </div>

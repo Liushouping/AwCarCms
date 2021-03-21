@@ -9,10 +9,11 @@
 @section('content')
 
 <div class="container">
+<small><a href="{{ route('home') }}">:: 首頁</a> > 最新優惠</small>
   <div class="row">
   
   @foreach ($activitys as $activity)
-    <div class="col-lg-4 mb-5">
+    <div class="col-lg-4 mb-5 mt-3">
       <a href="{{ route('activity.showactivity', $activity->id) }}">
       <div class="card text-dark">
         <img src="{{$activity->image_url}}" class="card-img" alt="...">

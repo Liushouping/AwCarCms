@@ -2,7 +2,7 @@
 $body-bg: #fff;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Roboto', 'Noto Sans TC';
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -17,3 +17,9 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+// Card
+.card {
+    border: #fff !important;
+    box-shadow: 0 2px 29px 0 rgb(68 88 144 / 12%);
+}
