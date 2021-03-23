@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','最新優惠')
 @section('bg-header')
 <div class="d-flex justify-content-center align-items-center mb-5"  style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);width:100%;height:250px;">
   <h2 class="display-4 display-xs-5 font-weight-bolder text-white">:: 最新優惠</h2>
@@ -23,8 +23,9 @@
 
         <div class="card-body text-center">
           <h5 class="font-weight-bolder">{{ $activity->title }}</h5>
-          <!-- <br>
-          <small>活動時間：{{ $activity->start_date }} ~ {{ $activity->end_date }}</small> -->
+        </div>
+        <div class="card-footer border-top bg-white">
+        <small><i class="far fa-clock"></i> 活動時間：{{ $activity->start_date }} ~ {{ $activity->end_date }}</small>
         </div>
       </div>
     </a>  

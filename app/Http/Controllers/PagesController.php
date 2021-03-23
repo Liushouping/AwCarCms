@@ -9,14 +9,21 @@ use App\Models\Sop;
 use App\Models\Notice;
 use App\Models\Car;
 use App\Models\Power;
+use App\Models\Product;
 
 class PagesController extends Controller
 {
     public function index()
     {
         $banners = Banner::query()->where('on_sale', true)->orderBy('order','asc')->get();
+        $products = Product::all();
         $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
-        return view('pages.index', compact('banners','activitys'));
+        return view('pages.index', compact('banners','activitys','products'));
+    }
+
+    public function policy()
+    {
+        return view('pages.privacy-policy');
     }
 
     public function sop()

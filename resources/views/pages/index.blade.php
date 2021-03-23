@@ -8,14 +8,7 @@
 <!-- 列表 -->
 <section class="container">
   <div class="row mb-3">
-    <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="100">
-      <div class="d-flex justify-content-between mb-4">
-      <h3 class="font-weight-bolder">最新優惠</h3>
-      <!-- <h3 class="text-primary font-weight-bolder pull-right"> 更多優惠</h3> -->
-      </div>
-      @include('activities._activity')
-    </div>
-    <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+    <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
         <div class="d-flex justify-content-between">
           <h3 class="font-weight-bolder mb-4">超跑出租</h3>
         </div>
@@ -25,6 +18,12 @@
             <img src="https://i2.wp.com/twgofun.com.tw/wp-content/uploads/2021/03/khc_tr1_001.png?w=1080&ssl=1" class="w-100">
           </div>
         </a>
+    </div>
+    <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+      <div class="d-flex justify-content-between mb-4">
+      <h3 class="font-weight-bolder">最新優惠</h3>
+      </div>
+      @include('activities._activity')
     </div>
   </div>
 </section>
@@ -37,13 +36,13 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <div class="icon-box" style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);color:#fff" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
             <h4 class="font-weight-bolder title">手續快速簡便</h4>
             <p class="description font-weight-light">免押證件、免簽本票、超跑出租、租超跑、租跑車不用怕</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="icon-box" style="background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);color:#fff" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-md-6 mt-5 mt-md-0">
+          <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
             <h4 class="font-weight-bolder title">租車皆含以下高額保險</h4>
             <p class="description font-weight-light">乙式車體險、竊盜險、第三人責任險、超額責任險、駕駛人傷害險、強制險
             </p>
@@ -53,8 +52,8 @@
   </div>
 </section>
 <!-- 過場 -->
-<section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;">
-
+<!-- <section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;"> -->
+<section style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);padding:60px 0px">
   <div class="container">
     <div class="row">
       <div class="col-12 mt-5 mb-2" data-aos="zoom-in" data-aos-delay="100">
@@ -98,8 +97,18 @@
     </div>
   </div>
 </section>
+<!-- 車款 -->
+<section class="container">
+  <div class="row mb-3">
+    <div class="col-md-12 mb-4" data-aos="fade-right" data-aos-delay="100">
+      <div class="d-flex justify-content-between mb-4">
+      <h3 class="font-weight-bolder">超跑車款</h3>
+      </div>
+      @include('pages._product')
+    </div>
+  </div>
+</section>
 @stop
-
 @section('script')
 <script src="{{ asset('/js/YouTubePopUp.jquery.js') }}"></script>
 

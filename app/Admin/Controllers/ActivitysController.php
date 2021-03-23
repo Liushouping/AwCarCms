@@ -15,7 +15,7 @@ class ActivitysController extends AdminController
      *
      * @var string
      */
-    protected $title = '最新活動';
+    protected $title = '最新優惠';
 
     /**
      * Make a grid builder.
@@ -43,7 +43,13 @@ class ActivitysController extends AdminController
         $grid->start_date('開始時間');
         $grid->end_date('結束時間');
         $grid->created_at('創建時間');
+        $grid->filter(function($filter){
 
+            // 去掉默认的id过滤器
+            $filter->disableIdFilter();
+            // 在这里添加字段过滤器
+            $filter->like('title', '名稱');
+        });
         $grid->actions(function ($actions) {
             $actions->disableView();
         });
@@ -94,9 +100,9 @@ class ActivitysController extends AdminController
         $form->text('title', '名稱')->rules('required');
         $form->text('order', '排序')->rules('required');
         $form->image('image', '封面')->rules('required|image')->removable()->help('上傳前請先將圖片壓縮');
-        $form->radio('on_sale', '是否顯示')->options(['1' => '是', '0'=> '否'])->default('0');
-        $form->dateRange('start_date', 'end_date', '活動期間');
-        $form->select('status','狀態')->options([0 => '準備', 1 => '進行', 2 => '結束']);
+        $form->radio('on_sale', '是否顯示')->rules('required')->options(['1' => '是', '0'=> '否'])->default('1');
+        $form->dateRange('start_date', 'end_date', '活動期間')->rules('required');
+        $form->select('status','狀態')->options([0 => '準備', 1 => '進行', 2 => '結束'])->rules('required');
         $form->quill('body', '描述')->rules('required');
         return $form;
     }

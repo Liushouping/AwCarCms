@@ -11,7 +11,6 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
     'accepted'        => '必須接受 :attribute。',
     'active_url'      => ':attribute 不是有效的網址。',
     'after'           => ':attribute 必須要晚於 :date。',
@@ -156,7 +155,8 @@ return [
         'date'                  => '日期',
         'day'                   => '天',
         'description'           => '描述',
-        'email'                 => 'E-mail',
+        'email'                 => '信箱',
+        'body'                  => '內容',
         'excerpt'               => '摘要',
         'first_name'            => '名',
         'gender'                => '性別',

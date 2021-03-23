@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','聯絡我們')
 @section('bg-header')
 <div class="d-flex justify-content-center align-items-center mb-5"  style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);width:100%;height:250px;">
   <h2 class="display-4 display-xs-5 font-weight-bolder text-white">:: 聯絡我們</h2>
@@ -9,11 +9,10 @@
 @stop
 
 @section('content')
-@include('shared._error')
 <div class="container">
 <small><a href="{{ route('home') }}">:: 首頁</a> > 聯絡我們</small>
   <div class="row mt-3">
-    <div class="col-md-6">
+    <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
       <form class="needs-validation card icon-box p-5 mb-5" action="{{route('contact.store')}}" method="POST" novalidate>
       {{ csrf_field() }}
       <h3 class="font-weight-light">聯絡我們</h3>
@@ -57,7 +56,7 @@
         <button type="submit" class="btn btn-danger w-100">送出</button>
       </form>
     </div>
-    <div class="col-md-6 mb-5">
+    <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
       <div class="card icon-box p-5">
         <h3 class="font-weight-light">殷煌國際超跑租賃</h3>
         <hr>

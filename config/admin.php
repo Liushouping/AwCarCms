@@ -5,7 +5,7 @@ return [
     /*
      * 站点标题
      */
-    'name' => '後台管理',
+    'name' => '後台管理系統',
 
     /*
      * 页面顶部 Logo
@@ -42,7 +42,7 @@ return [
     /*
      * Laravel-Admin 页面标题
      */
-    'title' => 'AW 管理後台',
+    'title' => 'AW殷煌國際超跑租賃｜後台系統',
 
     /*
      * 是否使用 https
@@ -187,7 +187,7 @@ return [
     /*
      * 显示版本
      */
-    'show_version' => true,
+    'show_version' => false,
 
     /*
      * 显示环境

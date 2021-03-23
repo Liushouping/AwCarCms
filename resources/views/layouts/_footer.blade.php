@@ -76,7 +76,7 @@
       <div class="col-md-4 box">
         <ul class="list-inline quick-links">
           <li class="list-inline-item">
-            <a href="#">隱私權政策</a>
+            <a href="{{ route('policy') }}">隱私權政策</a>
           </li>
         </ul>
       </div>

@@ -21,3 +21,35 @@ require('./bootstrap');
       prevEl: '.sp1',
     },
 });
+
+const swiper2 = new Swiper('#swiper2', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.s2',
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  },
+  navigation: {
+    nextEl: '.sn2 ',
+    prevEl: '.sp2',
+  },
+});

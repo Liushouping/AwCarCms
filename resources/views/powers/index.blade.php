@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','性能車款')
 @section('bg-header')
 <div class="d-flex justify-content-center align-items-center mb-5"  style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);width:100%;height:250px;">
   <h2 class="display-4 display-xs-5 font-weight-bolder text-white">:: 性能車款</h2>
@@ -12,8 +12,8 @@
 <div class="row row-cols-1 row-cols-md-2 mt-3">
 @foreach( $powers as $power )
   <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="{{$power->image_url}}" class="card-img-top" alt="...">
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="{{$power->image_url}}" class="card-img-top">
       <div class="card-body p-3">
         <h5 class="card-title">{{$power->title}}</h5>
         <p class="card-text">

@@ -17,6 +17,14 @@ class ContactsController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'name'=>'required',
+            'body' => 'required'
+         ]);
+
         $contacts = Contact::create([
             'title' => $request->title,
             'body' => $request->body,
@@ -34,11 +42,10 @@ class ContactsController extends Controller
             'phone' => $request->phone
         ];
 
-        Mail::send($view, $data, function ($message) use ($data) {
-            $message->to($data['email'])->subject($data['title']);
-        });
+        // Mail::send($view, $data, function ($message) use ($data) {
+        //     $message->to($data['email'])->subject($data['title']);
+        // });
         
-        alert()->success('您做得很棒！','您已經成功提交。');
-        return redirect()->back();
+        return redirect()->back()->with('success','您已經成功提交。');
     }
 }

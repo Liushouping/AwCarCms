@@ -20,6 +20,9 @@ Route::group([
     // 廣告橫幅
     $router->resource('banners', BannersController::class);
 
+    // 超跑車款
+    $router->resource('products', ProductsController::class);
+
     // 最新優惠
     $router->resource('activitys', ActivitysController::class);
 
