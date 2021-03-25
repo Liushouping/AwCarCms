@@ -16479,6 +16479,11 @@ header .menu-images img {
   opacity: 0;
 }
 
+.show {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 .right-bottom i {
   display: flex;
   align-items: center;
@@ -16545,11 +16550,6 @@ header .menu-images img {
 .right-bottom-tel i:hover {
   background: #c20909;
   color: #fff;
-}
-
-#back-to-top .show {
-  opacity: 1;
-  visibility: visible;
 }
 
 /*--------------------------------------------------------------
