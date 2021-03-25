@@ -21,11 +21,17 @@ class ActivityFactory extends Factory
             'https://i1.wp.com/twgofun.com.tw/wp-content/uploads/2021/02/khc_tr_005-1.png?w=1080&ssl=1',
         ];
         
+        $title = [
+            '時時刻刻約會',
+            '現在下訂，立馬優惠大方送',
+            '好運道～好運來',
+        ];
+
         return [
-            'title' => $this->faker->title,
-            'body' => $this->faker->text(200),
+            'title' => $this->faker->randomElement($title),
+            'body' => $this->faker->realText(200),
             'on_sale' => $this->faker->boolean(true),
-            'order' => $this->faker->unique()->numberBetween(1, 100),
+            'order' => $this->faker->unique()->numberBetween(1, 20),
             'start_date' => $this->faker->date(),
             'end_date' => $this->faker->date(),
             'status' => $this->faker->boolean(true),

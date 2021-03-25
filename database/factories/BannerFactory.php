@@ -13,12 +13,20 @@ class BannerFactory extends Factory
     public function definition()
     {
         $images = [
-            'https://s3-ap-northeast-1.amazonaws.com/thga/wp-content/uploads/2019/11/07021637/index_03.png',
+            'https://img.asiayo.com/img/banner/banner_202103084706L.png',
+            'https://img.asiayo.com/img/banner/banner_202102246219L.png',
+            'https://img.asiayo.com/img/banner/banner_202103233843L.png'
         ];
         
+        $title = [
+            '時時刻刻約會',
+            '現在下訂，立馬優惠大方送',
+            '好運道～好運來',
+        ];
+
         return [
-            'title' => $this->faker->title,
-            'description' => $this->faker->text(200),
+            'title' => $this->faker->randomElement($title),
+            'description' => $this->faker->realText(200),
             'on_sale' => $this->faker->boolean(true),
             'order' => $this->faker->unique()->numberBetween(1, 100),
             'link' => $this->faker->url,

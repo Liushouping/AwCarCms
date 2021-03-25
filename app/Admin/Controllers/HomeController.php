@@ -36,9 +36,6 @@ class HomeController extends Controller
             //     });
             // });
             ->row(function ($row) {
-                // $row->column(3, new InfoBox('New Users', 'users', 'aqua', '/admin/users', '1024'));
-                // $row->column(3, new InfoBox('New Orders', 'shopping-cart', 'green', '/admin/orders', '150%'));
-                // $row->column(3, new InfoBox('Articles', 'book', 'yellow', '/admin/articles', '2786'));
                 $row->column(3, function (Column $column) {
                     $column->append($this->activitys());
                 });
@@ -51,6 +48,7 @@ class HomeController extends Controller
                 $row->column(3, function (Column $column) {
                     $column->append($this->powers());
                 });
+                
             });
     }
 

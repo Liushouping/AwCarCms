@@ -371,16 +371,42 @@ nav div.show {
 }
 
 /*--------------------------------------------------------------
-# 右下角Line
+# 右下角Icon
 --------------------------------------------------------------*/
 .right-bottom {
   position: fixed;
   right: 20px;
-  bottom: 35px;
+  bottom: 25px;
   z-index: 99999;
+  opacity: 0
 }
 
 .right-bottom i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #5a5a5a;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.right-bottom i:hover {
+  background: #111111;
+  color: #fff;
+}
+
+.right-bottom-line {
+  position: fixed;
+  right: 20px;
+  bottom: 75px;
+  z-index: 99999;
+}
+
+.right-bottom-line i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,28 +419,40 @@ nav div.show {
   transition: all 0.4s;
 }
 
-.right-bottom i:hover {
+.right-bottom-line i:hover {
   background: #00805d;
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# CSS 改變 QA Icon
---------------------------------------------------------------*/
-
-[aria-expanded="false"] .menu__icon--open {
-  display: inline;
-}
-[aria-expanded="false"] .menu__icon--close {
-  display: none;
-}
-[aria-expanded="true"] .menu__icon--open {
-  display: none;
-}
-[aria-expanded="true"] .menu__icon--close {
-  display: inline;
+.right-bottom-tel {
+  position: fixed;
+  right: 20px;
+  bottom: 125px;
+  z-index: 99999;
 }
 
+.right-bottom-tel i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #d64949;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.right-bottom-tel i:hover {
+  background: #c20909;
+  color: #fff;
+}
+
+#back-to-top .show {
+  opacity: 1;
+  visibility: visible;
+}
 /*--------------------------------------------------------------
 # 首頁圖片加上疊圖播放 Icon & 燈箱
 --------------------------------------------------------------*/

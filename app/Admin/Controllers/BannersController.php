@@ -27,7 +27,7 @@ class BannersController extends AdminController
     {
         $grid = new Grid(new Banner());
         $grid->model()->orderBy('created_at', 'asc');
-        $grid->id('ID')->sortable();
+        // $grid->id('ID')->sortable();
         $grid->title('橫幅名稱');
         $grid->image('橫幅圖片')->image('/storage',200,200)->help('請先將圖片優化壓縮再進行上傳，（3840 x 820 會縮至 1200 x 300）');
         // $grid->description('描述');

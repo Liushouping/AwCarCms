@@ -19,10 +19,9 @@
 
 <body>
   <div id="app">
-<div class="loader_bg">
-  <div class="loader">
+  <div class="loader_bg">
+    <div class="loader"></div>
   </div>
-</div>
     @include('sweetalert::alert')
     <!-- 導覽 -->
     @include('layouts._header')
@@ -35,13 +34,19 @@
     <!-- 頁尾 -->
     @include('layouts._footer')
     <!-- 產品 -->
-    <a href="https://line.me/ti/p/_3p57YrhGC" class="right-bottom"><i class="fab fa-line"></i></a>
+    <a href="tel:0912345678" class="right-bottom-tel"><i class="fas fa-phone-square"></i></a>
+    <a href="https://line.me/ti/p/_3p57YrhGC" class="right-bottom-line"><i class="fab fa-line"></i></a>
+    <a href="javascript:;" class="right-bottom" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>
   </div>
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
   <link href="{{ asset('/css/aos.css')}}" rel="stylesheet">
   <script src="{{ asset('/js/aos.js')}}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+
   @yield('script')
   <script>
   setTimeout(function(){
@@ -67,6 +72,40 @@
       once: true,
       mirror: false
   });
+
+  $( document ).ready(function() {
+ 
+  // Greensock animation
+  $(".card").on('click', function() {
+    if ( $(this).hasClass('flip') ) {
+      $(this).removeClass('flip');
+      TweenLite.to($(this).find('.card-front'), 1, {autoAlpha:1, rotationY:0});
+      TweenLite.to($(this).find('.card-back'), 1, {autoAlpha:1, rotationY:180}, 0);
+    } else {
+      $(this).addClass('flip');
+      TweenLite.to($(this).find('.card-front'), 1, {autoAlpha:1, rotationY:180});
+      TweenLite.to($(this).find('.card-back'), 1, {autoAlpha:1, rotationY:0}, 0);
+    }
+  });
+  
+  $('.js-tilt').tilt();
+  });
+
+  var btn = $('#back-to-top');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 50) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
   </script>
 </body>
 

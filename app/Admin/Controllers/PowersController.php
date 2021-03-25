@@ -27,7 +27,7 @@ class PowersController extends AdminController
         $grid = new Grid(new Power());
 
         $grid->model()->orderBy('created_at', 'asc');
-        $grid->id('ID')->sortable();
+        // $grid->id('ID')->sortable();
         $grid->title('名字');
         $grid->model('車型');
         $grid->image('圖片')->image('/storage',200,200)->help('建議圖片尺寸為690 × 464，上傳前請先將圖片優化壓縮');

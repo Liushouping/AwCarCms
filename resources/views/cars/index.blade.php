@@ -15,17 +15,17 @@
 
 @foreach( $cars as $car )
   <div class="col-lg-4 mb-4 tt">
-    <div class="card icon-box" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card icon-box js-tilt" data-aos="zoom-in" data-aos-delay="100">
       <div class="position-relative">
       <img src="{{$car->image_url}}" class="card-img-top">
-      <span class="position-absolute text-white font-weight-bolder" style="top:0;left:0;background:red;padding:5px 20px">NT {{$car->price}}</span>
+      <span class="position-absolute bg-dark text-white font-weight-bolder" style="top:0;left:0;padding:5px 20px">NT {{$car->price}}</span>
       </div>
       <div class="card-body p-3">
         車款類型
         <h5 class="card-title font-weight-bolder">{{$car->title}}</h5>
         <div class="d-flex justify-content-between p-0">
         <p class="card-text text-danger font-weight-bolder">{{$car->price}}<small class="text-dark font-weight-light">（租金）</small></p>
-        <a href="" class="btn btn-warning p-2 ">立即聯絡</a>
+        <i class="fas fa-key"></i>
         </div>
       </div>
       <div class="card-footer border-top bg-white">

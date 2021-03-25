@@ -26,7 +26,7 @@ class ActivitysController extends AdminController
     {
         $grid = new Grid(new Activity());
         $grid->model()->orderBy('created_at', 'asc');
-        $grid->id('ID')->sortable();
+        // $grid->id('ID')->sortable();
         $grid->title('名稱');
         $grid->image('封面')->image('/storage',200,200);
         $grid->status('狀態')->using([
