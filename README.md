@@ -2,25 +2,24 @@
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## 租貸超跑 形象網站＋後台管理
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel 8 開發，以 Laravel-admin 作為後台管理，功能如下:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
+- Fullpage 響應式選單
+- 廣告橫幅輪播式 Banner ｜ 後台操控
+- 燈箱功能影片瀏覽
+- 最新優惠 ｜ 後台操控
+- 超跑展示輪播式 ｜ 後台操控
+- 超跑車款＋性能車款 ｜ 後台操控
+- 聯絡我們 ｜ 寄信功能 ( Sweetalert作為提醒視窗 )
+- 租車流程＋租車須知 ｜ 後台操控
+- SEO 重要資訊 ｜ 後台操控
+- Page 加載動畫
+- AOS 進場動畫
+- 右下角重要聯絡資訊＋回到頂端
 
 ## License
 
