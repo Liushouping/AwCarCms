@@ -22,8 +22,14 @@ class ContactsController extends Controller
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'name'=>'required',
-            'body' => 'required'
-         ]);
+            'body' => 'required',
+            'captcha' => ['required', 'captcha']
+        ],
+            [
+            'captcha.required' => '驗證碼不能為空',
+            'captcha.captcha' => '請輸入正確的驗證碼',
+            ]
+         );
 
         $contacts = Contact::create([
             'title' => $request->title,

@@ -53,6 +53,19 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <label>驗證碼</label>
+          <input id="captcha" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }}" name="captcha" required>
+
+                <img class="thumbnail captcha mt-3 mb-2" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="点击图片重新获取验证码">
+
+                @if ($errors->has('captcha'))
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('captcha') }}</strong>
+                  </span>
+                @endif
+        </div>
+
         <button type="submit" class="btn btn-danger w-100">送出</button>
       </form>
     </div>
