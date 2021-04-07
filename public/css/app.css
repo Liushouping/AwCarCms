@@ -16765,3 +16765,8 @@ body.logged-in .YouTubePopUp-Wrap {
   top: calc(50vh - 75px);
   left: calc(50vw - 75px);
 }
+
+.card:hover {
+  transform: translateY(-12px) !important;
+  transition: transform 0.3s !important;
+}

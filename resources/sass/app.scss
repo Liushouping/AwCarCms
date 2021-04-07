@@ -726,3 +726,7 @@ content: '';
   left: calc(50vw  - 75px);
 }
 
+.card:hover{
+  transform: translateY(-12px) !important;
+  transition: transform .3s !important;
+}

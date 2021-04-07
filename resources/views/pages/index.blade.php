@@ -22,6 +22,7 @@
     <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
       <div class="d-flex justify-content-between mb-4">
       <h3 class="font-weight-bolder">最新優惠</h3>
+      <a href="{{ route('activity.indexActivity') }}"><p class="font-weight-light text-black-50">更多最新優惠</p></a>
       </div>
       @include('activities._activity')
     </div>
