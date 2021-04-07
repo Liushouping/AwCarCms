@@ -7,6 +7,7 @@ use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMessage;
 use Alert;
+use App\Mail\Contactsendmail;
 
 class ContactsController extends Controller
 {
@@ -21,7 +22,7 @@ class ContactsController extends Controller
             'title' => 'required',
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'name'=>'required',
+            'name'=>'required|min:2',
             'body' => 'required',
             'captcha' => ['required', 'captcha']
         ],
@@ -39,19 +40,13 @@ class ContactsController extends Controller
             'phone' => $request->phone
         ]);
 
-        $view = 'mails.contact';
-        $data = [
-            'title' => $request->title,
-            'body' => $request->body,
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone
-        ];
+        $title = $request->title;
+        $body = $request->body;
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
 
-        // Mail::send($view, $data, function ($message) use ($data) {
-        //     $message->to($data['email'])->subject($data['title']);
-        // });
-        
+        Mail::to($email)->send(new Contactsendmail($title, $body, $name, $email ,$phone));
         return redirect()->back()->with('success','您已經成功提交。');
     }
 }

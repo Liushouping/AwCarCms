@@ -37,6 +37,7 @@ html {
 body {
   font-family: Roboto, 'Noto Sans TC';
   letter-spacing: 0.25px;
+  background: rgb(247,247,247);
 }
 
 a {
@@ -629,7 +630,7 @@ content: '';
   overflow: hidden;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 2px 29px 0 rgb(68 88 144 / 12%);
+  box-shadow: 0 0.25rem 0.5rem rgb(42 42 42 / 5%);
   transition: all 0.4s ease-in-out;
   width: 100%;
   height: 100%;
@@ -710,14 +711,14 @@ content: '';
 .loader_bg {
   position: fixed;
   z-index: 99999;
-  background: #fff;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   width: 100%;
   height: 100%
 }
 
 .loader{
-  border:0 solid transparent;
-  border-radius: 50%;
+  // border:0 solid transparent;
+  // border-radius: 50%;
   width:150px;
   height:150px;
   position: absolute;
@@ -725,33 +726,3 @@ content: '';
   left: calc(50vw  - 75px);
 }
 
-.loader:before, .loader:after{
-  content: '';
-  border:1em solid #ff5733;
-  border-radius: 50%;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: loader 2s linear infinite;
-  opacity: 0;
-}
-
-.loader::before {
-  animation-delay: .5s;
-} 
-
-@keyframes loader{
-  0%{
-    transform: scale(0);
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    transform: scale(1);
-    opacity: 0;
-  }
-}

@@ -20,7 +20,33 @@
 <body>
   <div id="app">
   <div class="loader_bg">
-    <div class="loader"></div>
+    <div class="loader">
+    <svg version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50" height="50">
+      <animateTransform
+        attributeName="transform"
+        dur="0.5s"
+        from="0 50 50"
+        to="180 50 50"
+        type="rotate"
+        id="strokeBox"
+        attributeType="XML"
+        begin="rectBox.end"/>
+      </rect>
+      <rect x="27" y="27" fill="#fff" width="46" height="50">
+      <animate
+        attributeName="height"
+        dur="1.3s"
+        attributeType="XML"
+        from="50" 
+        to="0"
+        id="rectBox" 
+        fill="freeze"
+        begin="0s;strokeBox.end"/>
+      </rect>
+    </svg>
+    </div>
   </div>
     @include('sweetalert::alert')
     <!-- 導覽 -->
@@ -43,9 +69,7 @@
   <script src="{{ mix('js/app.js') }}"></script>
   <link href="{{ asset('/css/aos.css')}}" rel="stylesheet">
   <script src="{{ asset('/js/aos.js')}}"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+  <script src="{{ asset('vendor/lottie/app.js') }}" defer></script>
 
   @yield('script')
   <script>
@@ -71,24 +95,6 @@
       easing: "ease-in-out",
       once: true,
       mirror: false
-  });
-
-  $( document ).ready(function() {
- 
-  // Greensock animation
-  $(".card").on('click', function() {
-    if ( $(this).hasClass('flip') ) {
-      $(this).removeClass('flip');
-      TweenLite.to($(this).find('.card-front'), 1, {autoAlpha:1, rotationY:0});
-      TweenLite.to($(this).find('.card-back'), 1, {autoAlpha:1, rotationY:180}, 0);
-    } else {
-      $(this).addClass('flip');
-      TweenLite.to($(this).find('.card-front'), 1, {autoAlpha:1, rotationY:180});
-      TweenLite.to($(this).find('.card-back'), 1, {autoAlpha:1, rotationY:0}, 0);
-    }
-  });
-  
-  $('.js-tilt').tilt();
   });
 
   var btn = $('#back-to-top');

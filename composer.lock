@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37271f8661da9a66f093155fb6395068",
+    "content-hash": "59411a2350188795840d3064c5d1f2f8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3057,6 +3057,68 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.10.6"
             },
             "time": "2021-01-18T15:53:43+00:00"
+        },
+        {
+            "name": "pys/laravel-blade-lottie",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pys1992/laravel-blade-lottie.git",
+                "reference": "4a0e97c4aab745351d5edd507f1d1eb614d1c355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pys1992/laravel-blade-lottie/zipball/4a0e97c4aab745351d5edd507f1d1eb614d1c355",
+                "reference": "4a0e97c4aab745351d5edd507f1d1eb614d1c355",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pys\\Lottie\\LottieServiceProvider"
+                    ],
+                    "aliases": {
+                        "Lottie": "Pys\\Lottie\\Facades\\Lottie"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pys\\Lottie\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "pys",
+                    "email": "me@psy.im"
+                }
+            ],
+            "description": "A lottie component for laravel blade.",
+            "keywords": [
+                "AE Animation",
+                "blade",
+                "laravel",
+                "lottie",
+                "阿里犸良"
+            ],
+            "support": {
+                "issues": "https://github.com/pys1992/laravel-blade-lottie/issues",
+                "source": "https://github.com/pys1992/laravel-blade-lottie/tree/v1.0.0"
+            },
+            "time": "2021-03-31T05:28:13+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

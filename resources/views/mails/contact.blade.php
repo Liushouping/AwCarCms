@@ -1,86 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
-<head>
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>殷煌國際超跑租賃</title>
-
-<style type="text/css">
-img {
-max-width: 100%;
-}
-body {
--webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em;
-}
-body {
-background-color: #f6f6f6;
-}
-@media only screen and (max-width: 640px) {
-  body {
-    padding: 0 !important;
-  }
-  h1 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h2 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h3 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h4 {
-    font-weight: 800 !important; margin: 20px 0 5px !important;
-  }
-  h1 {
-    font-size: 22px !important;
-  }
-  h2 {
-    font-size: 18px !important;
-  }
-  h3 {
-    font-size: 16px !important;
-  }
-  .container {
-    padding: 0 !important; width: 100% !important;
-  }
-  .content {
-    padding: 0 !important;
-  }
-  .content-wrap {
-    padding: 10px !important;
-  }
-  .invoice {
-    width: 100% !important;
-  }
-}
-</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">
-
-<table class="body-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
-		<td class="container" width="600" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto;" valign="top">
-			<div class="content" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;">
-				<table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background-color: #fff; margin: 0; border: 1px solid #e9e9e9;" bgcolor="#fff"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="alert alert-warning" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #fff; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; background-color: #FF9F00; margin: 0; padding: 20px;" align="center" bgcolor="#FF9F00" valign="top">
-                殷煌國際超跑租賃
-						</td>
-					</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-wrap" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top">
-							<table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										姓名：{{$name}}
-                    <br>
-                    信箱：{{$email}}
-                    <br>
-                    電話：{{$phone}}
-									</td>
-                
-								</tr><tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;"><td class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">
-										標題：{{$title}}<br>
-                                        內容：{{$body}}
-									</td>
-								</tr></table></td>
-					</tr></table><div class="footer" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;">
-					</div></div>
-		</td>
-		<td style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
-	</tr></table></body>
-</html>
+<table width="100%" height="100%" border="0" cellpadding="20" cellspacing="0" style="margin:0;border-collapse:collapse;border-spacing:0;padding:20px;font-family: Arial;">
+  <tr>
+    <td width="100%" valign="top" align="center" bgcolor="#eceeed">
+      <table border="0" cellpadding="0" cellspacing="0" class="body" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;width:100%;background:#fff;max-width:550px;margin:0px;border-radius:5px;">
+        <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+          <td class="container" style="padding:0;border-collapse:collapse;border-spacing:0;">
+            <div class="content" style="margin:0;padding:0;">
+              <table class="main" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                  <td class="wrapper" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                      <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                        <td style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                          <div class="headerimage" style="margin:0;padding:0;">
+                            <img src="https://i2.wp.com/twgofun.com.tw/wp-content/uploads/2021/03/khc_tr1_001.png?w=1080&ssl=1" alt="header" style="margin:0;padding:0;border-radius:5px 5px 0px 0px;overflow:hidden;" width="100%" />
+                          </div>
+                          <div class="in-content" style="margin:0;padding:0;padding:30px;">
+                            <h3 style="margin:0;font-family:Helvetica, Arial;line-height:1.4;color:#3f526d;font-weight:500;font-size:20px;margin:20px 0px 15px;padding:0;">{{$title}}</h3>
+                            <p style="margin:0;padding:0;font-family:Helvetica, Arial;margin-bottom:10px;font-weight:300;color:#96a6b0;font-size:15px;line-height:1.6;">{{$body}}</p>
+                            <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" width="100%" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                              <tbody style="margin:0;padding:0;">
+                                <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                                  <td align="center" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                                      <tbody style="margin:0;padding:0;">
+                                        <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                                          <td style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+                                            <div style="margin:0;padding:0;text-align: center;width: 100%;">
+                                              <a href="#" target="_blank" class="cta-button" style="margin:0;padding:0;display:inline-block;background:#8799f6;color:#fff;text-decoration:none;padding:15px 25px;border-radius:5px;font-size:14px;letter-spacing:1px;font-weight:100;margin:20px auto;">超跑網站</a>                                              </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top" align="center" bgcolor="#eceeed">
+      <table style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;width: 100%;max-width: 550px;margin: 0px auto;text-align: center;color: #ccc;font-size: 14px;" align="center">
+        <tr style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">
+          <td style="margin:0;padding:0;border-collapse:collapse;border-spacing:0;">&copy; 2020 AW</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
