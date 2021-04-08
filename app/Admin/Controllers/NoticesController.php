@@ -25,13 +25,19 @@ class NoticesController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Notice());
-
+        $grid->number('編號')->width(50);
+        $grid->rows(function ($row, $number) {  
+            $row->column('number', $number+1);  
+        });  
         $grid->title('名稱');
         $grid->created_at('創建時間');
         $grid->updated_at('更新時間');
         $grid->actions(function ($actions) {
             $actions->disableView();
+            $actions->disableDelete();
         });
+        $grid->disableCreateButton();
+        $grid->disableFilter();
         return $grid;
     }
 

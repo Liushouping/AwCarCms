@@ -27,23 +27,27 @@ class BannersController extends AdminController
     {
         $grid = new Grid(new Banner());
         $grid->model()->orderBy('created_at', 'asc');
-        // $grid->id('ID')->sortable();
-        $grid->title('橫幅名稱');
-        $grid->image('橫幅圖片')->image('/storage',200,200)->help('請先將圖片優化壓縮再進行上傳，（3840 x 820 會縮至 1200 x 300）');
-        // $grid->description('描述');
-        $grid->link('網址')->link();
+        $grid->number('編號')->width(50);
+        $grid->rows(function ($row, $number) {  
+            $row->column('number', $number+1);  
+        });  
+        $grid->image('圖片')->image('/storage',200,200)->help('請先將圖片優化壓縮再進行上傳，（3840 x 820 會縮至 1200 x 300）');
+        $grid->title('名稱');
+        $states = [
+            'on'  => ['value' => 1, 'text' => '是', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => '否', 'color' => 'default'],
+        ];
+        $grid->column('on_sale','顯示')->switch($states);
+        $grid->link('連結')->link();
         $grid->order('排序')->sortable();
-        $grid->on_sale('是否顯示')->display(function ($value) {
-            return $value ? '是' : '否';
-        });
-        $grid->filter(function($filter){
+        // $grid->filter(function($filter){
 
-            // 去掉默认的id过滤器
-            $filter->disableIdFilter();
-            // 在这里添加字段过滤器
-            $filter->like('title', '標題');
-        });
-        
+        //     // 去掉默认的id过滤器
+        //     $filter->disableIdFilter();
+        //     // 在这里添加字段过滤器
+        //     $filter->like('title', '標題');
+        // });
+        $grid->disableFilter();
         $grid->actions(function ($actions) {
             $actions->disableView();
         });
@@ -66,8 +70,11 @@ class BannersController extends AdminController
         $form->text('description', '描述');
         $form->text('link','網址')->rules('required');
         $form->text('order', '排序')->rules('required');
-        $form->radio('on_sale', '是否顯示')->options(['1' => '是', '0'=> '否'])->default('1');
-
+        $states = [
+            'on'  => ['value' => 1, 'text' => '是', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => '否', 'color' => 'default'],
+        ];
+        $form->switch('on_sale','顯示')->states($states);
         return $form;
     }
 }

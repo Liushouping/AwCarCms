@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Database\Eloquent\Collection;
 
 class ActivitysController extends AdminController
 {
@@ -26,9 +27,11 @@ class ActivitysController extends AdminController
     {
         $grid = new Grid(new Activity());
         $grid->model()->orderBy('created_at', 'asc');
-        // $grid->id('ID')->sortable();
-        $grid->title('名稱');
-        $grid->image('封面')->image('/storage',200,200);
+        $grid->number('編號')->width(50);
+        $grid->rows(function ($row, $number) {  
+            $row->column('number', $number+1);  
+        });  
+        $grid->image('圖片')->image('/storage',200,200);
         $grid->status('狀態')->using([
             0 => '準備',
             1 => '進行',
@@ -38,18 +41,27 @@ class ActivitysController extends AdminController
             1 => 'success',
             2 => 'danger',
         ], 'warning');
-        $grid->order('排序')->sortable();
-        $grid->on_sale('顯示')->using(['0' => '否', '1' => '是']);
+        $grid->title('名稱');
+        $states = [
+            'on'  => ['value' => 1, 'text' => '是', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => '否', 'color' => 'default'],
+        ];
+        $grid->column('on_sale','顯示')->switch($states);
         $grid->start_date('開始時間');
         $grid->end_date('結束時間');
-        $grid->created_at('創建時間');
-        $grid->filter(function($filter){
+        $grid->order('排序')->sortable();
+        // $grid->created_at('創建時間');
+        // $grid->filter(function($filter){
+        //     // 去掉默认的id过滤器
+        //     $filter->disableIdFilter();
+        //     // 在这里添加字段过滤器
+        //     $filter->like('title', '名稱');
+        // });
 
-            // 去掉默认的id过滤器
-            $filter->disableIdFilter();
-            // 在这里添加字段过滤器
-            $filter->like('title', '名稱');
-        });
+        // 设置text、color、和存储值
+
+        
+        $grid->disableFilter();
         $grid->actions(function ($actions) {
             $actions->disableView();
         });
@@ -100,7 +112,11 @@ class ActivitysController extends AdminController
         $form->text('title', '名稱')->rules('required');
         $form->text('order', '排序')->rules('required');
         $form->image('image', '封面')->rules('required|image')->removable()->help('上傳前請先將圖片壓縮');
-        $form->radio('on_sale', '是否顯示')->rules('required')->options(['1' => '是', '0'=> '否'])->default('1');
+        $states = [
+            'on'  => ['value' => 1, 'text' => '是', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => '否', 'color' => 'default'],
+        ];
+        $form->switch('on_sale','顯示')->states($states);
         $form->dateRange('start_date', 'end_date', '活動期間')->rules('required');
         $form->select('status','狀態')->options([0 => '準備', 1 => '進行', 2 => '結束'])->rules('required');
         $form->quill('body', '描述')->rules('required');

@@ -75,7 +75,7 @@
   <script>
   setTimeout(function(){
     $('.loader_bg').fadeToggle();
-  },500);
+  },700);
 
   $(document).ready(function() {
     $('button').on('click', function() {

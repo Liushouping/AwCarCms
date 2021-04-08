@@ -21,6 +21,10 @@ class UsersController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new User);
+        $grid->number('編號');
+        $grid->rows(function ($row, $number) {  
+            $row->column('number', $number+1);  
+        });  
         $grid->model()->orderBy('created_at', 'asc');
         $grid->id('ID')->sortable();
         $grid->name('姓名');

@@ -31,15 +31,15 @@
           
     </div>
     <div class="col-md-4 p-4">
-      <h2 class="font-weight-bolder mb-4 mt-5"><i class="fas fa-bookmark"></i> 近期優惠</h2>
+      <h2 class="font-weight-bolder mb-4 mt-5">:: 近期優惠</h2>
       <table class="table table-hover">
       <tbody>
         @foreach ($dates as $date)
           <tr>
             <td style="font-size:16px">
             <a href="{{ route('activity.showactivity', $date->id) }}">
-            <span>{{$loop->index+1}} - </span>
-            {{ $date->title }}
+            <span class="badge badge-danger">{{$loop->index+1}}</span>
+            &nbsp;&nbsp;{{ $date->title }}
             </a>
             </td>
           </tr>
