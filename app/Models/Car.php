@@ -11,6 +11,8 @@ class Car extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
 
+    protected $table = 'cars';
+
     protected $fillable = [
         'title',
         'description',
@@ -36,4 +38,9 @@ class Car extends Model
         }
         return \Storage::disk('public')->url($this->attributes['image']);
     }
+
+    // public function reservation()
+    // {
+    //     return $this->hasOne(Reservation::class, 'reservation_id');
+    // }
 }

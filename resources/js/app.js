@@ -30,26 +30,26 @@ const swiper2 = new Swiper('#swiper2', {
     delay: 2000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: '.s2',
-    clickable: true,
-  },
+  // pagination: {
+  //   el: '.s2',
+  //   clickable: true,
+  // },
   breakpoints: {
     640: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
     1024: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 2,
+      spaceBetween: 15,
     }
   },
-  navigation: {
-    nextEl: '.sn2 ',
-    prevEl: '.sp2',
-  },
+  // navigation: {
+  //   nextEl: '.sn2 ',
+  //   prevEl: '.sp2',
+  // },
 });

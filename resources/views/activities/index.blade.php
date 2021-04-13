@@ -15,7 +15,7 @@
   @foreach ($activitys as $activity)
     <div class="col-lg-4 mb-5 mt-3">
       <a href="{{ route('activity.showactivity', $activity->id) }}">
-      <div class="card text-dark">
+      <div class="card text-dark card-hover">
         <img src="{{$activity->image_url}}" class="card-img" alt="...">
         <div class="card-img-overlay">
           <p class="card-text">@if($activity->status == 0)<span class="badge bg-success text-white">準備</span>@elseif($activity->status == 1)<span class="badge bg-danger text-white">進行</span>@else<span class="badge bg-dark text-white">結束</span>@endif</p>

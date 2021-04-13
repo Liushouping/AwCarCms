@@ -16,9 +16,11 @@ class PagesController extends Controller
     public function index()
     {
         $banners = Banner::query()->where('on_sale', true)->orderBy('order','asc')->get();
-        $products = Product::all();
+        $products = Product::select(['image'])->get();
+        $cars = Car::select('title','id')->get();
+        $powers = Power::select('title')->get();
         $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
-        return view('pages.index', compact('banners','activitys','products'));
+        return view('pages.index', compact('banners','activitys','products','cars','powers'));
     }
 
     public function policy()

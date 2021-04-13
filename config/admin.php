@@ -187,7 +187,7 @@ return [
     /*
      * 显示版本
      */
-    'show_version' => false,
+    'show_version' => true,
 
     /*
      * 显示环境

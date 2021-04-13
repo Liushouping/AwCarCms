@@ -15,7 +15,7 @@
 
 @foreach( $powers as $power )
   <div class="col-lg-4 mb-4 tt">
-    <div class="card icon-box" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card icon-box card-hover" data-aos="zoom-in" data-aos-delay="100">
       <div class="position-relative">
       <img src="{{$power->image_url}}" class="card-img-top">
       <span class="position-absolute bg-dark text-white font-weight-bolder" style="top:0;left:0;padding:5px 20px">NT {{$power->price}}</span>

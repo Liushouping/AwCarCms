@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<!-- 列表 -->
+<!-- 左邊影片右邊列表 -->
 <section class="container">
   <div class="row mb-3">
     <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
@@ -36,15 +36,17 @@
       <p class="text-justify font-weight-light">免除您開車時之各種意外糾紛，可完全由保險公司處理，使您暢快享受駕駛樂趣！</p>
     </div>
     <div class="row">
-      <div class="col-md-6">
+        <div class="col-md-6 p-3">
         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
             <h4 class="font-weight-bolder title">手續快速簡便</h4>
+            <hr>
             <p class="description font-weight-light">免押證件、免簽本票、超跑出租、租超跑、租跑車不用怕</p>
           </div>
         </div>
         <div class="col-md-6 mt-5 mt-md-0">
           <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
             <h4 class="font-weight-bolder title">租車皆含以下高額保險</h4>
+            <hr>
             <p class="description font-weight-light">乙式車體險、竊盜險、第三人責任險、超額責任險、駕駛人傷害險、強制險
             </p>
           </div>
@@ -52,9 +54,8 @@
     </div>
   </div>
 </section>
-<!-- 過場 -->
-<!-- <section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;"> -->
-<section style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);padding:60px 0px">
+<!-- 公司介紹 -->
+<section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;">
   <div class="container">
     <div class="row">
       <div class="col-12 mt-5 mb-2" data-aos="zoom-in" data-aos-delay="100">
@@ -98,7 +99,7 @@
     </div>
   </div>
 </section>
-<!-- 車款 -->
+<!-- 車款輪播 -->
 <section class="container">
   <div class="row mb-3">
     <div class="col-md-12 mb-4" data-aos="fade-right" data-aos-delay="100">
@@ -109,6 +110,119 @@
     </div>
   </div>
 </section>
+<!---->
+<section class="container">
+<div class="row">
+<div class="col-md-12">
+  <div class="card p-5 mb-5">
+    <nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">立即聯絡</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">LINE客服</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">線上預約</a>
+    </nav>
+  </div>
+</div>
+<div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+      <form class="card p-5 mb-5" action="{{route('reservation.store')}}" method="POST" novalidate>
+      {{ csrf_field() }}
+      <div class="d-flex justify-content-between">
+      <h3 class="font-weight-light">預約超跑</h3>
+      <i class="fas fa-bookmark text-danger"></i>
+      </div>
+      <hr>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>租車人姓名：</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="請輸入租車人姓名" required>
+          </div>
+          <div class="col-md-3 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>先生/小姐：：</label>
+          <select class="custom-select" name="gender" required>
+            <option selected disabled value="">請選擇...</option>
+            <option value="0">先生</option>
+            <option value="1">小姐</option>
+          </select>
+          </div>
+          <div class="col-md-3 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>年齡：</label>
+          <input class="form-control" type="number" value="18" name="age" id="example-number-input">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>聯絡電話</label>
+          <input type="phone" class="form-control" id="phone" name="phone" placeholder="請輸入聯絡電話" required>
+          </div>
+          <div class="col-md-6 mb-3">
+          <label>電子信箱</label>
+          <div class="input-group">
+            <input type="email" class="form-control rounded-right" placeholder="請輸入電子信箱" name="email">
+          </div>
+          </div>
+          <div class="col-md-3 mb-3">
+          <label>LINE ID</label>
+          <input type="text" class="form-control" id="line" name="line" placeholder="請輸入LINE ID">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>租車日期</label>
+          <input class="form-control" type="date" value="2011-08-19" name="date" id="example-date-input">
+          </div>
+          <div class="col-md-6 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>租車時間</label>
+          <input class="form-control" type="time" value="13:45" name="time" id="example-time-input">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>選擇超跑車款</label>
+          <select class="custom-select" name="car" required>
+            <option value="0">無</option>
+            @foreach($cars as $car)
+            <option value="{{ $car->title }}">
+                {{ $car->title }}
+            </option>
+            @endforeach
+          </select>
+          </div>
+          <div class="col-md-6 mb-3">
+          <i class="fas fa-bookmark text-danger"></i> <label>選擇性能車款</label>
+          <select class="custom-select" name="power" required>
+            <option value="0">無</option>
+            @foreach($powers as $power)
+            <option value="{{ $power->title}}">
+                {{ $power->title }}
+            </option>
+            @endforeach
+          </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>備註</label>
+          <textarea class="form-control" id="body" rows="3" name="body" placeholder="請輸入備註內容"></textarea>
+
+        </div>
+
+        <div class="form-group">
+        <i class="fas fa-bookmark text-danger"></i> <label>驗證碼</label>
+          <input id="captcha" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }}" name="captcha" required>
+
+                <img class="thumbnail captcha mt-3 mb-2" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="點擊圖片重新獲取驗證碼">
+
+                @if ($errors->has('captcha'))
+                  <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('captcha') }}</strong>
+                  </span>
+                @endif
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100">送出</button>
+      </form>
+</div>
+</div>
+</section>
+
 @stop
 @section('script')
 <script src="{{ asset('/js/YouTubePopUp.jquery.js') }}"></script>

@@ -12,6 +12,7 @@
 
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;700&family=Roboto:wght@100;700&display=swap');
+
 // 
 $lightbrown: rgb(190, 128, 64);
 $lightgray: rgb(35,35,35);
@@ -395,13 +396,13 @@ nav div.show {
   width: 45px;
   height: 45px;
   border-radius: 50px;
-  background: #5a5a5a;
+  background: #212529;
   color: #fff;
   transition: all 0.4s;
 }
 
 .right-bottom i:hover {
-  background: #111111;
+  background: #5a5a5a;
   color: #fff;
 }
 
@@ -638,20 +639,19 @@ content: '';
 
 .services .icon {
   position: absolute;
-  left: -10px;
+  left: 20px;
   top: calc(50% - 30px);
 }
 
 .services .title {
-  margin-left: 40px;
-  font-weight: 700;
+  margin-left: 80px;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
 .services .description {
   font-size: 14px;
-  margin-left: 40px;
+  margin-left: 80px;
   line-height: 24px;
   margin-bottom: 0;
 }
@@ -663,57 +663,17 @@ content: '';
 }
 
 /*--------------------------------------------------------------
-# Slider 過場
---------------------------------------------------------------*/
-
-// .swiper-slide::before {
-// 	position: absolute;
-// 	content:"";
-// 	width: 50%;
-// 	height: 100%;
-// 	top: 0;
-// 	left: -75%;
-// 	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-// 	transform: skewX(-25deg);
-//   display: none;
-// }
-
-// .swiper-wrapper .swiper-slide:hover::before {
-// 	animation: anm 0.7s;
-//   display: block;
-// }
-
-// @keyframes anm {
-// 	100% {
-// 		left: 125%;
-// 	}
-// }
-
-/*--------------------------------------------------------------
-# Card
---------------------------------------------------------------*/
-
-// .card-body{
-//   border-radius: 25px;
-//   transition: all 1s linear;
-//   cursor: pointer;
-// }
-
-// .card:hover {
-//   transform: translateY(-25px);
-//   transition: all .5s linear;
-// }
-
-/*--------------------------------------------------------------
 # 加載頁面
 --------------------------------------------------------------*/
 
 .loader_bg {
   position: fixed;
   z-index: 99999;
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  // background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background: #212529;
+  opacity: 0.2;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .loader{
@@ -722,11 +682,11 @@ content: '';
   width:150px;
   height:150px;
   position: absolute;
-  top: calc(50vh - 75px);
-  left: calc(50vw  - 75px);
+  top: calc(50vh - 50px);
+  left: calc(50vw  - 50px);
 }
 
-.card:hover{
+.card-hover:hover{
   transform: translateY(-12px) !important;
   transition: transform .3s !important;
 }

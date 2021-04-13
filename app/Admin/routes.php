@@ -37,4 +37,7 @@ Route::group([
 
     // 租車須知
     $router->resource('notices', NoticesController::class);
+
+    // 超跑預約
+    $router->resource('reservations', ReservationsController::class);
 });

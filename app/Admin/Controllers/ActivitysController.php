@@ -58,9 +58,7 @@ class ActivitysController extends AdminController
         //     $filter->like('title', '名稱');
         // });
 
-        // 设置text、color、和存储值
-
-        
+        // 设置text、color、和存储值 
         $grid->disableFilter();
         $grid->actions(function ($actions) {
             $actions->disableView();

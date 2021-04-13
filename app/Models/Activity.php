@@ -22,8 +22,6 @@ class Activity extends Model
     protected $casts = [
         'on_sale' => 'boolean',
     ];
-    
-
 
     public function getImageUrlAttribute()
     {

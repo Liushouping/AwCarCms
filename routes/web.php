@@ -18,6 +18,10 @@ Route::get('/privacy-policy', 'PagesController@policy')->name('policy');
 Route::resource('contact', ContactsController::class)->only([
     'index', 'store'
 ]);
+// 超跑預約
+Route::resource('reservation', ReservationsController::class)->only([
+    'store'
+]);
 // 最新優惠
 Route::get('activity', 'PagesController@activity')->name('activity.indexActivity');
 Route::get('activity/{id}', 'PagesController@ShowActivity')->name('activity.showactivity');
