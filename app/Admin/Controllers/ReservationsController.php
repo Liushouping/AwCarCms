@@ -44,15 +44,9 @@ class ReservationsController extends AdminController
             }
         });
         $grid->name('姓名');
-        $grid->power('性能車款');
+        // $grid->power('性能車款');
+        $grid->column('power.title','超跑車款');
         $grid->column('car.title','超跑車款');
-      //   $grid->column('car')->display(function($id) {
-      //     return Car::find($id);
-      // });
-      //show的使用 通过 as 可以使用模型关联调用数据
-        // $grid->car('超跑車款')->as(function () {
-        //   return $this->car->title;
-        // });
         $grid->phone('電話');
         $grid->date('預約日期');
         $grid->time('預約時間');

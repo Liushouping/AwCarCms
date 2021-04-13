@@ -649,6 +649,10 @@ content: '';
   font-size: 18px;
 }
 
+.fast{
+  margin-left: 0px !important;
+}
+
 .services .description {
   font-size: 14px;
   margin-left: 80px;
@@ -669,7 +673,6 @@ content: '';
 .loader_bg {
   position: fixed;
   z-index: 99999;
-  // background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   background: #212529;
   opacity: 0.2;
   width: 100%;
@@ -677,8 +680,6 @@ content: '';
 }
 
 .loader{
-  // border:0 solid transparent;
-  // border-radius: 50%;
   width:150px;
   height:150px;
   position: absolute;

@@ -4,7 +4,7 @@
     @foreach($products as $product)
     <!-- <a href=""> -->
         <div class="swiper-slide p-0">
-            <img src="{{$product->image_url}}" class="img-fluid rounded">
+            <img src="{{$product->image_url}}" class="img-fluid rounded" style="padding:30px;background:#fff;box-shadow: 0 0.25rem 0.5rem rgb(42 42 42 / 5%);">
         </div>
     <!-- </a> -->
     @endforeach

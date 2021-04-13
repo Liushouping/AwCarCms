@@ -38,16 +38,16 @@
     <div class="row">
         <div class="col-md-6 p-3">
         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <h4 class="font-weight-bolder title">手續快速簡便</h4>
+            <h4 class="font-weight-bolder title ml-0">手續快速簡便</h4>
             <hr>
-            <p class="description font-weight-light">免押證件、免簽本票、超跑出租、租超跑、租跑車不用怕</p>
+            <p class="description font-weight-light ml-0">免押證件、免簽本票、超跑出租、租超跑、租跑車不用怕</p>
           </div>
         </div>
         <div class="col-md-6 mt-5 mt-md-0">
           <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <h4 class="font-weight-bolder title">租車皆含以下高額保險</h4>
+            <h4 class="font-weight-bolder title ml-0 mt-3">租車皆含以下高額保險</h4>
             <hr>
-            <p class="description font-weight-light">乙式車體險、竊盜險、第三人責任險、超額責任險、駕駛人傷害險、強制險
+            <p class="description font-weight-light ml-0">乙式車體險、竊盜險、第三人責任險、超額責任險、駕駛人傷害險、強制險
             </p>
           </div>
         </div>

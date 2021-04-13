@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Encore\Admin\Traits\DefaultDatetimeFormat;
 
-
 class Reservation extends Model
 {
     use HasFactory, DefaultDatetimeFormat;
@@ -35,5 +34,10 @@ class Reservation extends Model
     public function car()
     {
         return $this->hasOne(Car::class);
+    }
+
+    public function power()
+    {
+        return $this->hasOne(Power::class);
     }
 }
