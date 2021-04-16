@@ -30,8 +30,8 @@
         <hr>
           
     </div>
-    <div class="col-md-4 p-4">
-      <h2 class="font-weight-bolder mb-4 mt-5">:: 近期優惠</h2>
+    <div class="col-md-4 card p-5 mb-5">
+      <h2 class="font-weight-bolder mb-3">最新優惠</h2>
       <table class="table table-hover">
       <tbody>
         @foreach ($dates as $date)

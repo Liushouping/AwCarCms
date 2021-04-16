@@ -33,6 +33,7 @@
   <div class="container">
     <div class="section-title mb-4" data-aos="fade-right" data-aos-delay="100">
       <h3 class="font-weight-bolder">客戶權益</h3>
+      <hr class="mt-2 mb-3 site_hr" width="120px">
       <p class="text-justify font-weight-light">免除您開車時之各種意外糾紛，可完全由保險公司處理，使您暢快享受駕駛樂趣！</p>
     </div>
     <div class="row">
@@ -43,7 +44,7 @@
             <p class="description font-weight-light ml-0">免押證件、免簽本票、超跑出租、租超跑、租跑車不用怕</p>
           </div>
         </div>
-        <div class="col-md-6 mt-5 mt-md-0">
+        <div class="col-md-6 mt-0 mt-md-0">
           <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
             <h4 class="font-weight-bolder title ml-0 mt-3">租車皆含以下高額保險</h4>
             <hr>
@@ -72,6 +73,7 @@
   <div class="container">
     <div class="section-title mb-4" data-aos="fade-left" data-aos-delay="100">
       <h3 class="font-weight-bolder">服務項目</h3>
+      <hr class="mt-2 mb-3 site_hr" width="120px">
       <p class="text-justify font-weight-light">採取預約制度，讓您不用出門就可以享受，送車到府的貼心服務！</p>
     </div>
     <div class="row">
@@ -103,8 +105,9 @@
 <section class="container">
   <div class="row mb-3">
     <div class="col-md-12 mb-4" data-aos="fade-right" data-aos-delay="100">
-      <div class="d-flex justify-content-between mb-4">
+      <div class="mb-4 text-center">
       <h3 class="font-weight-bolder">超跑車款</h3>
+      <hr class="mt-2 mb-3 site_hr mx-auto" width="120px">
       </div>
       @include('pages._product')
     </div>
@@ -113,15 +116,6 @@
 <!---->
 <section class="container">
 <div class="row">
-<div class="col-md-12">
-  <div class="card p-5 mb-5">
-    <nav class="nav nav-pills flex-column flex-sm-row">
-    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">立即聯絡</a>
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">LINE客服</a>
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">線上預約</a>
-    </nav>
-  </div>
-</div>
 <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
       <form class="card p-5 mb-5" action="{{route('reservation.store')}}" method="POST" novalidate>
       {{ csrf_field() }}

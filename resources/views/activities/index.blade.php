@@ -21,11 +21,13 @@
           <p class="card-text">@if($activity->status == 0)<span class="badge bg-success text-white">準備</span>@elseif($activity->status == 1)<span class="badge bg-danger text-white">進行</span>@else<span class="badge bg-dark text-white">結束</span>@endif</p>
         </div>
 
-        <div class="card-body text-center">
+        <div class="card-body">
+          <small><i class="far fa-clock"></i> 活動時間：{{ $activity->start_date }} ~ {{ $activity->end_date }}</small>
+          <br><br>
           <h5 class="font-weight-bolder">{{ $activity->title }}</h5>
         </div>
-        <div class="card-footer border-top bg-white">
-        <small><i class="far fa-clock"></i> 活動時間：{{ $activity->start_date }} ~ {{ $activity->end_date }}</small>
+        <div class="card-footer border-top bg-white d-flex justify-content-end">
+        <!-- <p><i class="fas fa-angle-double-right"></i>閱讀更多</p> --> 
         </div>
       </div>
     </a>  

@@ -16145,7 +16145,7 @@ html {
 }
 
 body {
-  font-family: Roboto, "Noto Sans TC";
+  font-family: "Noto Sans TC", "Roboto";
   letter-spacing: 0.25px;
   background: #f7f7f7;
 }
@@ -16180,6 +16180,13 @@ ul {
 p {
   font-size: 16px;
   text-align: justify;
+}
+
+.site_hr {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000;
+  clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -16767,4 +16774,8 @@ body.logged-in .YouTubePopUp-Wrap {
 .card-hover:hover {
   transform: translateY(-12px) !important;
   transition: transform 0.3s !important;
+}
+
+.card {
+  overflow: hidden;
 }

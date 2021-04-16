@@ -2,8 +2,8 @@ require('./bootstrap');
 
  // import Swiper bundle with all modules installed
  import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
  
- import 'swiper/swiper-bundle.css';
  const swiper1 = new Swiper('#swiper1', {
     spaceBetween: 30,
     effect: 'fade',
@@ -27,7 +27,7 @@ const swiper2 = new Swiper('#swiper2', {
   spaceBetween: 20,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     disableOnInteraction: false,
   },
   // pagination: {
@@ -36,20 +36,20 @@ const swiper2 = new Swiper('#swiper2', {
   // },
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 15,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 15,
     }
   },
-  // navigation: {
-  //   nextEl: '.sn2 ',
-  //   prevEl: '.sp2',
-  // },
+  navigation: {
+    nextEl: '.sn2 ',
+    prevEl: '.sp2',
+  },
 });

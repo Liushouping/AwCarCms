@@ -30,7 +30,7 @@ class Reservation extends Model
         'date' => 'date:Y-m-d',
         'time' => 'datetime:H:i'
     ];
-    
+
     public function car()
     {
         return $this->hasOne(Car::class);

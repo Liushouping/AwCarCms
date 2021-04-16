@@ -66,7 +66,6 @@
   <script src="{{ mix('js/app.js') }}"></script>
   <link href="{{ asset('/css/aos.css')}}" rel="stylesheet">
   <script src="{{ asset('/js/aos.js')}}"></script>
-  <script src="{{ asset('vendor/lottie/app.js') }}" defer></script>
 
   @yield('script')
   <script>

@@ -43,4 +43,5 @@ class Car extends Model
     // {
     //     return $this->hasOne(Reservation::class, 'reservation_id');
     // }
+
 }
