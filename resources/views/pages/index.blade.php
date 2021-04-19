@@ -79,7 +79,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-6">
         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-          <div class="icon"><i class="fas fa-car"></i></div>
+          <div class="icon"><i class="fas fa-mars-stroke"></i></div>
             <h4 class="font-weight-bolder title">結婚禮車</h4>
             <p class="description font-weight-light">婚紗攝影用車 | 婚禮用車</p>
           </div>
@@ -93,7 +93,7 @@
         </div>
         <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
           <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-car"></i></div>
+            <div class="icon"><i class="fas fa-glass-cheers"></i></div>
             <h4 class="font-weight-bolder title">活動用車</h4>
             <p class="description font-weight-light">活動、商演用車 | 劇組拍攝用車</p>
           </div>

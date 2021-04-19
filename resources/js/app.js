@@ -24,7 +24,7 @@ import 'swiper/swiper-bundle.css';
 
 const swiper2 = new Swiper('#swiper2', {
   slidesPerView: 1,
-  spaceBetween: 20,
+  // spaceBetween: 20,
   loop: true,
   autoplay: {
     delay: 3000,
@@ -37,15 +37,15 @@ const swiper2 = new Swiper('#swiper2', {
   breakpoints: {
     640: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      // spaceBetween: 20,
     },
     768: {
       slidesPerView: 1,
-      spaceBetween: 15,
+      // spaceBetween: 15,
     },
     1024: {
       slidesPerView: 1,
-      spaceBetween: 15,
+      // spaceBetween: 15,
     }
   },
   navigation: {
