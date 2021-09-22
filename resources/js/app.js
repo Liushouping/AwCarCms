@@ -24,32 +24,29 @@ import 'swiper/swiper-bundle.css';
 
 const swiper2 = new Swiper('#swiper2', {
   slidesPerView: 1,
-  // spaceBetween: 20,
+  spaceBetween: 10,
   loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
-  // pagination: {
-  //   el: '.s2',
-  //   clickable: true,
-  // },
+  pagination: false,
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       // spaceBetween: 20,
     },
     768: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       // spaceBetween: 15,
     },
     1024: {
-      slidesPerView: 1,
+      slidesPerView: 3,
       // spaceBetween: 15,
     }
   },
   navigation: {
-    nextEl: '.sn2 ',
-    prevEl: '.sp2',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });

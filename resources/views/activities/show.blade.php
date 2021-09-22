@@ -12,6 +12,7 @@
     <div class="col-md-8 p-4 ckeditor">
         <small><a href="{{ route('home') }}">:: 首頁</a> > 最新優惠</small>
         <hr>
+        <img src="{{$activitys->image_url}}" class="card-img">
         <h2 class="font-weight-bolder mb-4 mt-4">{{ $activitys->title }}</h2>
         <small>發佈時間：{{ $activitys->created_at }}</small>
         <br>
@@ -30,8 +31,8 @@
         <hr>
           
     </div>
-    <div class="col-md-4 card p-5 mb-5">
-      <h2 class="font-weight-bolder mb-3">最新優惠</h2>
+    <div class="col-md-4 p-3 mb-5 border-left">
+      <h2 class="font-weight-bolder mb-3">最新消息</h2>
       <table class="table table-hover">
       <tbody>
         @foreach ($dates as $date)

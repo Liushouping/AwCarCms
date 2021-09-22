@@ -22,12 +22,15 @@ Route::resource('contact', ContactsController::class)->only([
 Route::resource('reservation', ReservationsController::class)->only([
     'store'
 ]);
-// 最新優惠
+// 最新消息
 Route::get('activity', 'PagesController@activity')->name('activity.indexActivity');
 Route::get('activity/{id}', 'PagesController@ShowActivity')->name('activity.showactivity');
+Route::get('search', 'PagesController@search')->name('search');
+
 
 // 用戶相關
 // Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
 // 用户身份驗證相關的路由
 // Auth::routes();
+

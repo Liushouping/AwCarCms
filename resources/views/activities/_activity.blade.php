@@ -9,7 +9,10 @@
       {{ $activity->title }}
       </a>
       </td>
+      <td>
+      </td>
     </tr>
   @endforeach
   </tbody>
 </table>
+<a href="{{ route('activity.indexActivity') }}" class="btn border w-100 bg-white" role="button">更多消息  <i class="fas fa-angle-right"></i></a>

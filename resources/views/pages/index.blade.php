@@ -7,29 +7,28 @@
 @section('content')
 <!-- 左邊影片右邊列表 -->
 <section class="container">
-  <div class="row mb-3">
-    <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+  <div class="row">
+    <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
         <div class="d-flex justify-content-between">
           <h3 class="font-weight-bolder mb-4">超跑出租</h3>
         </div>
 
         <a href="https://youtu.be/cASsC-MsJ1A" id="yt-preview">
-          <div class="video-thumbnail">
-            <img src="https://i2.wp.com/twgofun.com.tw/wp-content/uploads/2021/03/khc_tr1_001.png?w=1080&ssl=1" class="w-100">
+          <div class="video-thumbnail mb-5">
+            <img src="https://i2.wp.com/twgofun.com.tw/wp-content/uploads/2021/03/khc_tr1_001.png?w=1080&ssl=1" class="w-100 rounded-lg">
           </div>
         </a>
     </div>
-    <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
-      <div class="d-flex justify-content-between mb-4">
-      <h3 class="font-weight-bolder">最新優惠</h3>
-      <a href="{{ route('activity.indexActivity') }}"><p class="font-weight-light text-black-50">更多最新優惠</p></a>
+    <!-- <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+      <div class="d-flex mb-4">
+      <h3 class="font-weight-bolder">最新消息</h3>
       </div>
       @include('activities._activity')
-    </div>
+    </div> -->
   </div>
 </section>
 <!-- 客戶權益 -->
-<section id="services" class="services">
+<!-- <section id="services" class="services">
   <div class="container">
     <div class="section-title mb-4" data-aos="fade-right" data-aos-delay="100">
       <h3 class="font-weight-bolder">客戶權益</h3>
@@ -54,9 +53,9 @@
         </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- 公司介紹 -->
-<section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;">
+<!-- <section style="background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://bootstrapmade.com/demo/templates/Bethany/assets/img/cta-bg.jpg') fixed center center;background-size: cover;padding: 60px 0;">
   <div class="container">
     <div class="row">
       <div class="col-12 mt-5 mb-2" data-aos="zoom-in" data-aos-delay="100">
@@ -67,9 +66,9 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- 服務項目 -->
-<section id="services" class="services">
+<!-- <section id="services" class="services">
   <div class="container">
     <div class="section-title mb-4" data-aos="fade-left" data-aos-delay="100">
       <h3 class="font-weight-bolder">服務項目</h3>
@@ -100,21 +99,24 @@
         </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- 車款輪播 -->
 <section class="container">
   <div class="row mb-3">
     <div class="col-md-12 mb-4" data-aos="fade-right" data-aos-delay="100">
       <div class="mb-4 text-center">
       <h3 class="font-weight-bolder">超跑車款</h3>
-      <hr class="mt-2 mb-3 site_hr mx-auto" width="120px">
+      <!-- <div class="pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+      <!-- <hr class="mt-2 mb-3 site_hr mx-auto" width="120px"> -->
       </div>
       @include('pages._product')
     </div>
   </div>
 </section>
 <!---->
-<section class="container">
+<!-- <section class="container">
 <div class="row">
 <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
       <form class="card p-5 mb-5" action="{{route('reservation.store')}}" method="POST" novalidate>
@@ -161,7 +163,7 @@
         <div class="form-row">
           <div class="col-md-6 mb-3">
           <i class="fas fa-bookmark text-danger"></i> <label>租車日期</label>
-          <input class="form-control" type="date" value="2011-08-19" name="date" id="example-date-input">
+          <input class="form-control" type="date" value="2021-08-19" name="date" id="example-date-input">
           </div>
           <div class="col-md-6 mb-3">
           <i class="fas fa-bookmark text-danger"></i> <label>租車時間</label>
@@ -215,7 +217,7 @@
       </form>
 </div>
 </div>
-</section>
+</section> -->
 
 @stop
 @section('script')

@@ -19,7 +19,7 @@
         <!-- Authentication Links -->
         @guest
         <li class="nav-item"><a class="nav-link" href="">首頁</a></li>
-        <li class="nav-item"><a class="nav-link" href="">最新活動</a></li>
+        <li class="nav-item"><a class="nav-link" href="">最新消息</a></li>
         <li class="nav-item"><a class="nav-link" href="">常見問題</a></li>
         <li class="nav-item"><a class="nav-link" href="">關於我們</a></li>
         <li class="nav-item"><a class="nav-link" href="">聯絡我們</a></li>

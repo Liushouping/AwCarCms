@@ -172,7 +172,7 @@ return [
      * 页面风格
      * @see https://adminlte.io/docs/2.4/layout
      */
-    'skin' => 'skin-purple',
+    'skin' => 'skin-black',
 
     /*
      * 后台布局
@@ -187,7 +187,7 @@ return [
     /*
      * 显示版本
      */
-    'show_version' => true,
+    'show_version' => false,
 
     /*
      * 显示环境
@@ -202,7 +202,7 @@ return [
     /*
      * 默认启用面包屑
      */
-    'enable_default_breadcrumb' => true,
+    'enable_default_breadcrumb' => false,
 
     /*
     * 压缩资源文件
@@ -216,7 +216,7 @@ return [
     /*
     * 启用菜单搜索
     */
-    'enable_menu_search' => true,
+    'enable_menu_search' => false,
     /*
     * 顶部警告信息
     */

@@ -16,7 +16,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call(BannersTableSeeder::class);
         $this->call(ActivitysTableSeeder::class);
+        $this->call(SopTableSeeder::class);
+        $this->call(NoticesTableSeeder::class);
+        $this->call(CarsTableSeeder::class);
+        $this->call(PowersTableSeeder::class);
+        $this->call(ProductsTableSeeder::class);
 
-        $this->call(\Encore\Admin\Auth\Database\AdminTablesSeeder::class);
+        $this->call(AdminTableSeeder::class);
     }
 }

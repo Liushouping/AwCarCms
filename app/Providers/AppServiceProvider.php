@@ -5,6 +5,7 @@ namespace App\Providers;
 use Encore\Admin\Config\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        \Illuminate\Pagination\Paginator::useBootstrap();
+        Paginator::useBootstrap();
         
         $table = config('admin.extensions.config.table', 'admin_config');
         if (Schema::hasTable($table)) {

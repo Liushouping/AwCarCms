@@ -19,7 +19,8 @@ class PagesController extends Controller
         $products = Product::select(['image'])->get();
         $cars = Car::select('title','id')->get();
         $powers = Power::select('title')->get();
-        $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
+        $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(5);
+
         return view('pages.index', compact('banners','activitys','products','cars','powers'));
     }
 
@@ -52,10 +53,21 @@ class PagesController extends Controller
         return view('powers.index',compact('powers'));
     }
 
-    public function Activity()
+    public function Activity(Request $request)
     {
         $activitys = Activity::query()->where('on_sale', true)->orderBy('order','asc')->paginate(6);
         return view('activities.index', compact('activitys'));
+    }
+
+    public function search(Request $request)
+    {
+        $search_text = $request->input('query');
+        $countries = Activity::where('title','LIKE','%'.$search_text.'%')
+            ->where('on_sale', true)
+            ->orderBy('order','asc')
+            ->paginate(6);
+
+        return view('activities.search',['countries'=>$countries]);     
     }
 
     public function ShowActivity($id)

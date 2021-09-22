@@ -2,7 +2,6 @@
 
 use Illuminate\Routing\Router;
 
-
 Admin::routes();
 
 Route::group([
@@ -40,4 +39,5 @@ Route::group([
 
     // 超跑預約
     $router->resource('reservations', ReservationsController::class);
+    
 });

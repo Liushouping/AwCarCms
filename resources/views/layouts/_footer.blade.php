@@ -7,7 +7,7 @@
             <span class="footer-title">關於我們</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('activity.indexActivity') }}">最新優惠</a>
+            <a class="nav-link" href="{{ route('activity.indexActivity') }}">最新消息</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('car') }}">超跑車款</a>

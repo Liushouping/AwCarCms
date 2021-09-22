@@ -19,6 +19,7 @@
 
 <body>
   <div id="app">
+    <!-- 載入效果 -->
   <div class="loader_bg">
     <div class="loader">
     <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -42,7 +43,6 @@
             begin="0.4s" dur="0.6s" repeatCount="indefinite" />
         </rect>
     </svg>
-
     </div>
   </div>
     @include('sweetalert::alert')
@@ -53,7 +53,7 @@
     <!-- 頁首 -->
     @yield('bg-header')
     <!-- 內容 -->
-      @yield('content')
+    @yield('content')
     <!-- 頁尾 -->
     @include('layouts._footer')
     <!-- 產品 -->
@@ -71,7 +71,7 @@
   <script>
   setTimeout(function(){
     $('.loader_bg').fadeToggle();
-  },700);
+  },500);
 
   $(document).ready(function() {
     $('button').on('click', function() {

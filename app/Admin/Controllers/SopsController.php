@@ -22,6 +22,8 @@ class SopsController extends AdminController
      *
      * @return Grid
      */
+
+    
     protected function grid()
     {
         $grid = new Grid(new Sop());

@@ -22,16 +22,18 @@ class ActivityFactory extends Factory
         ];
         
         $title = [
-            '時時刻刻約會',
+            '夏季時刻，就來一刻',
             '現在下訂，立馬優惠大方送',
             '好運道～好運來',
+            '到店九折，打卡送禮',
+            '服務至上，歡迎光臨',
         ];
 
         return [
             'title' => $this->faker->randomElement($title),
             'body' => $this->faker->realText(200),
             'on_sale' => $this->faker->boolean(true),
-            'order' => $this->faker->unique()->numberBetween(1, 20),
+            'order' => $this->faker->numberBetween(1, 20),
             'start_date' => $this->faker->date(),
             'end_date' => $this->faker->date(),
             'status' => $this->faker->boolean(true),

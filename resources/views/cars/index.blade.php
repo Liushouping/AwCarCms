@@ -24,7 +24,7 @@
         車款類型
         <h5 class="card-title font-weight-bolder">{{$car->title}}</h5>
         <div class="d-flex justify-content-between p-0">
-        <p class="card-text text-danger font-weight-bolder">{{$car->price}}<small class="text-dark font-weight-light">（租金）</small></p>
+        <p class="card-text text-danger font-weight-bolder">＄{{$car->price}}<small class="font-weight-bolder">/Day</small><small class="text-dark font-weight-light">（ 租金 ）</small></p>
         <i class="fas fa-key"></i>
         </div>
       </div>
@@ -34,6 +34,8 @@
         <img src="{{asset('/image/exhaust-pipe.svg')}}" width="25px">&nbsp; 排氣量：{{$car->​exhaust}}<br><br>
         <img src="{{asset('/image/energy.svg')}}" width="25px">&nbsp; 最大馬力：{{$car->max_horsepower}}<br><br>
         <img src="{{asset('/image/chain.svg')}}" width="25px">&nbsp; 最大扭力：{{$car->​max_torque}}<br><br>
+
+        <button class="btn btn-danger w-100 mb-2">立即預訂</button>
       </div>
     </div>
   </div>
